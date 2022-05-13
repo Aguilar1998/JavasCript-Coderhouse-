@@ -1,17 +1,6 @@
-// estructura de control whille y if else
 
-// do...while
-// let n = Number(prompt("Ingrese un numero natural"))
-// let f=1
-// let c=0
-// do{
-//     c++
-//     f=f*c
-// }while(c=n)
 
-// console.log(f)
-
-// if 
+// if else and while
 let cantAprobados=Number(prompt("Ingrese la cantidad de aprobados"))
 
 if (cantAprobados!=0){
@@ -37,6 +26,3 @@ if (cantAprobados!=0){
     alert("Nadie aprobó")
 }
 
-// dwhile(){
-
-// }
