@@ -19,21 +19,22 @@ const materos = () => {
         }
         // Ingreso la preferencia de los integrande de la ronda
         let preferencia = prompt("Ingrese el tipo de yerba que prefiere \n Nro: #${i}")
+        let elPreferio1,elPreferio2,elPreferio3,elPreferio4
 
         // Comparo las preferencias y la asigno a una sola variable par aluego mostrar la preferida 
         switch(preferencia){
-            case yerbamate:
+            case "yerbamate":
                 elPreferio1 += 1
                 break
-            case aguantadora:
+            case "aguantadora":
 
                 elPreferio2 += 1
                 break
-            case taragui:
+            case "taragui":
 
                 elPreferio3 += 1
                 break
-            case rosamonte:
+            case "rosamonte":
 
                 elPreferio4 += 1
                 break
