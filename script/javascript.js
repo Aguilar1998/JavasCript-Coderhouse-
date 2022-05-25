@@ -21,13 +21,13 @@ const pasos = () => {
 
 const materos = (numRonda, ingrediente_1, ingrediente_2, ingrediente_3) => {
     var elSuperPreferido = 0;
+    let elPreferido1 = 0;
+    let elPreferido2 = 0;
+    let elPreferido3 = 0;
+    let elPreferido4 = 0;
     for (let i = 1; i <= numRonda; i++) {
         let preferencia = prompt(`Ingrese el tipo de yerba que prefiere \n Nro: #${i}`
         ).toLowerCase();
-        let elPreferido1 = 0;
-        let elPreferido2 = 0;
-        let elPreferido3 = 0;
-        let elPreferido4 = 0;
         // Comparo las preferencias y la asigno a una sola variable par aluego mostrar la preferida
         switch (preferencia) {
             case "yerbamate":
