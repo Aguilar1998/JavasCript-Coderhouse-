@@ -1,123 +1,113 @@
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-
-//          Se ingresa por cada alumno la calificación obtenida en una evaluación parcial 
-
-//       y el número de comisión al que pertenece.  
-
-//       Estos pares de datos llegan sin orden alguno.
-
-
-var notaPromedio
-
-const promedio = (totalDeCalificacion,cantDeAlumnosEnLaComision) => {
-
-    var notaPromedio = totalDeCalificacion/cantDeAlumnosEnLaComision
-
-    return " El promedio de la comision" + nroDeComisiones + " es de: " + notaPromedio
-
+function mate(ingrediente_1, ingrediente_2, ingrediente_3, elSuperPreferido) {
+    return “La mejor forma de preparar un mate es: \n 1-Llenar un termo con ” + “agua ” +” caliente. Para que la temperatura de tu mate esté en su punto justo, asegurate de que no esté ni tibia ni hirviendo… \n” + ” 2-Colocar la “ + ingrediente_1 + ” dentro del mate, “ + ” preferentemente el que el publico elije es la “ + elSuperPreferido + ”, luego agregarle algun yuyos como “ + ingrediente_2 +  ” y agitar… \n 3-Le sacamos el polvo y luego le colocamos el “ + ingrediente_3 + ” \n 4- Introducimos la bombilla \n 5- Cebamos y compartimos un momento.”
 }
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-
-var cantDeAlumnosEnLaComision
-
-var nombreDelAlumno
-
-var calificacion
-
-var cantDeAlumnosTotales_1
-
-var contadorDeComisiones_1
-
-var cantDeAlumnosTotales_2
-
-var contadorDeComisiones_2
-
-var cantDeAlumnosTotales_3
-
-var contadorDeComisiones_3
-
-var cantDeAlumnosTotales_4
-
-var contadorDeComisiones_4
-
-var cantDeAlumnosTotales_5
-
-var contadorDeComisiones_5
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// Informe el promedio de cada comisión.
-
-var cantComisiones = parseInt(prompt("(Por favor ingrese manos de 5 comisiones a la vez.)\n Cantidad de comisiones: "))
-
-do{
-
-    let cantDeAlumnosEnLaComision = parseInt(prompt("Ingrese la cantidad de alumnos en esta comision: "))
-
-    let alumno
-
-    for( alumno = 1; alumno < cantDeAlumnosEnLaComision ; alumno++){
-
-        nombreDelAlumno = prompt("Ingrese el nombre del alumno nro: " + alumno)
-
-        calificacion = parseInt(prompt("Ingrese la calificacion del alumno: " + alumno))
-
+    
+    const pasos \= () \=> {
+    
+    let numRonda \= parseInt(
+    
+    prompt(“Ingrese la cantidad de personas en la ronda”)
+    
+    );
+    
+    var ingrediente_1 \= prompt(
+    
+    “El ingrediente que va primero es: \n Paso 1 (yerba) “
+    
+    ).toLowerCase();
+    
+    var ingrediente_2 \= prompt(
+    
+    “El ingrediente que va segundo es: \n Paso 2 (yuyo)”
+    
+    ).toLowerCase();
+    
+    var ingrediente_3 \= prompt(
+    
+    “El ingrediente qeu va tercero es: \n Paso 3 (agua) “
+    
+    ).toLowerCase();
+    
+    materos(numRonda, ingrediente_1, ingrediente_2, ingrediente_3);
+    
+    };
+    
+    const materos \= (numRonda, ingrediente_1, ingrediente_2, ingrediente_3) \=> {
+    
+    var elSuperPreferido \= 0;
+    
+    for (let i \= 1; i <= numRonda; i++) {
+    
+    let preferencia \= prompt(
+    
+    `Ingrese el tipo de yerba que prefiere \n Nro: #${i}`
+    
+    ).toLowerCase();
+    
+    let elPreferido1 \= 0;
+    
+    let elPreferido2 \= 0;
+    
+    let elPreferido3 \= 0;
+    
+    let elPreferido4 \= 0;
+    
+    // Comparo las preferencias y la asigno a una sola variable par aluego mostrar la preferida
+    
+    switch (preferencia) {
+    
+    case “yerbamate”:
+    
+    elPreferido1 += 1;
+    
+    break;
+    
+    case “aguantadora”:
+    
+    elPreferido2 += 1;
+    
+    break;
+    
+    case “taragui”:
+    
+    elPreferido3 += 1;
+    
+    break;
+    
+    case “rosamonte”:
+    
+    elPreferido4 += 1;
+    
+    break;
+    
     }
-
-    var nroDeComisiones
-
-    switch(nroDeComisiones){
-
-        case 1:
-
-            totalDeCalificacion_1 += calificacion
-
-            cantDeAlumnosTotales_1 += cantDeAlumnosEnLaComision
-
-        case 2:
-
-            totalDeCalificacion_2 += calificacion
-
-            cantDeAlumnosTotales_2 += cantDeAlumnosEnLaComision
-
-        case 3:
-
-            totalDeCalificacion_3 += calificacion
-
-            cantD///eAlumnosTotales_3 += cantDeAlumnosEnLaComision
-
-        case 4:
-
-            totalDeCalificacion_4 += calificacion
-
-            cantDeAlumnosTotales_4 += cantDeAlumnosEnLaComision
-
-        case 5:
-
-            totalDeCalificacion_5 += calificacion
-
-            cantDeAlumnosTotales_5 += cantDeAlumnosEnLaComision
-
-        default:
-
-            console.log("No es posible cargar la 5ta comision.")
-
+    
+    if (elPreferido1 > elPreferido2) {
+    
+    elSuperPreferido \= “yerbamate”;
+    
+    } else if (elPreferido2 > elPreferido3) {
+    
+    elSuperPreferido \= “aguantadora”;
+    
+    } else if (elPreferido3 > elPreferido4) {
+    
+    elSuperPreferido \= “taragui”;
+    
+    } else {
+    
+    elSuperPreferido \= “rosamonte”;
+    
     }
-
-}while(nroDeComisiones <= cantComisiones)
-
-console.log("La comision" + contadorDeComisiones_1 + "tiene un promedio de: " + promedio) 
-
-console.log("La comision" + contadorDeComisiones_2 + "tiene un promedio de: " + promedio) 
-
-console.log("La comision" + contadorDeComisiones_3 + "tiene un promedio de: " + promedio) 
-
-console.log("La comision" + contadorDeComisiones_4 + "tiene un promedio de: " + promedio) 
-
-console.log("La comision" + contadorDeComisiones_5 + "tiene un promedio de: " + promedio) 
-
-//////////////////////////////////////////////////////////////////////////////////////////////////
-
-//     Se ingresa por cada alumno la calificación obtenida en una evaluación parcial y el número de comisión al que pertenece.  
-// Estos pares de datos llegan sin orden alguno. Informe el promedio de cada comisión.
+    
+    }
+    
+    console.log(
+    
+    mate(ingrediente_1, ingrediente_2, ingrediente_3, elSuperPreferido)
+    
+    );
+    
+    };
+    
+    pasos();
