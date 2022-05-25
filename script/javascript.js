@@ -6,6 +6,7 @@ function mate(ingrediente_1,ingrediente_2,ingrediente_3,elSuperPreferido){
 
 
 const materos = () => {
+
     let numRonda =parseInt(prompt("Ingrese la cantidad de personas en la ronda"))
     
     var elSuperPreferido= 0
@@ -19,7 +20,10 @@ const materos = () => {
         }
         // Ingreso la preferencia de los integrande de la ronda
         let preferencia = prompt("Ingrese el tipo de yerba que prefiere \n Nro: #${i}")
-        let elPreferio1,elPreferio2,elPreferio3,elPreferio4
+        let elPreferio1
+        let elPreferio2
+        let elPreferio3
+        let elPreferio4
 
         // Comparo las preferencias y la asigno a una sola variable par aluego mostrar la preferida 
         switch(preferencia){
