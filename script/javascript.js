@@ -26,16 +26,15 @@ function tareas(tarea){
 
 let cantTareas = Number(parseInt(prompt("Ingrese la cantidad de tareas que hay pendientes para asignar.")))
 
-if( cantTareas = todasLasTarea.length){
+if( cantTareas === todasLasTarea.length){
     for(let i= 1; i<= todasLasTarea.length ; i++){
-        var tarea1 = tareas(prompt("Ingrese la tarea"))
-
+        var tarea1 = tareas(prompt("Ingrese la tarea:"))
         console.log(tarea1)
     }
 }else{
-    console.log("Hay mas tareas de las que el personal puede tomar")
+    console.log("Hay mas tareas de las que el personal puede tomar.")
     for(let i= 1; i<= cantTareas; i++){
-        var tarea1 = tareas(prompt("Ingrese la tarea"))
+        var tarea1 = tareas(prompt("(Hay mas tareas de las que el personal puede tomar)\n Ingrese la tarea:" + i))
         console.log(tarea1)
     }
 }
