@@ -1,6 +1,7 @@
 
 
-// Practica de javascript (ciclos y funciones)
+// Desafio nro: 3
+
 const todasLasTarea = ["backend","frontend","marketing","emprendedor","cloud","chef"]
 
 function tareas(tarea){
@@ -18,7 +19,7 @@ function tareas(tarea){
         case todasLasTarea[5] :
             return "La tarea de chef esta asignada a Nilda Maria Alarcon"
         default:
-            return "No hay persona asignada para esta tarea.( "  + tarea + " )"
+            return "No hay persona asignada para esta tarea.( "  + tarea + " ) deberas contratar una nueva persona para esta tarea."
     }
 }
 
@@ -32,6 +33,7 @@ if( cantTareas = todasLasTarea.length){
         console.log(tarea1)
     }
 }else{
+    console.log("Hay mas tareas de las que el personal puede tomar")
     for(let i= 1; i<= cantTareas; i++){
         var tarea1 = tareas(prompt("Ingrese la tarea"))
         console.log(tarea1)
