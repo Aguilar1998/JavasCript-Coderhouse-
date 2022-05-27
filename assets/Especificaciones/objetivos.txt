@@ -1,5 +1,0 @@
-
-
-// -objetivos:
-// brindarle los ingredientes que quiero utilziar para armar mi mate y poder visualizar la forma correcta de cerbar mi mate segun mis ingredientes
-// calcular segun la cantidad de personas que ingrese pertenecientes a la ronda y que se me informe que termo es mas rendidor 
