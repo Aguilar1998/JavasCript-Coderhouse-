@@ -1,0 +1,21 @@
+
+// paleta de mensajes:
+
+        // Informacion:
+        // “Tomar mate es la tradición más popular de los argentinos, hoy redescubrimos el ritual. El mate nos acerca, rompe el hielo. Cualquier distancia que existe se va diluyendo con cada cebada, porque frente al mate somos todos iguales”, describe Valeria Trapaga primera sommelier del mundo especializada en cata de yerba mate, capacitada en Establecimiento Las Marías.
+
+        // Recomendaciones:
+        // * Vista. El color de la yerba tiene que ser verde claro con tonalidades amarillentas; las hojas deben exhibir un aspecto limpio y parejo en su color y formas, y los palos tienen que presentarse lo más enteros posibles.
+
+        // * Tacto. El polvo debe desprenderse fácilmente de la palma de la mano.
+
+        // * Olfato. Debe sentirse un aroma a hierba seca con un leve dejo tostado. Puede apreciarse pleno, puro y hasta complejo según sea su procedencia; siempre deben encontrarse esas notas redondas que refieren a su correcta maduración.
+
+        // * Oído. Al tomar un puñado de yerba mate y presionarlo acercándolo al oído, debe percibirse un crujido. Esto es algo virtuoso porque indica que dicha yerba pasó por un buen proceso de secanza.
+
+        // * Gusto. En esta instancia logran fidelizarse todas estas características y los aromas de boca deben enriquecerse con otros matices; es decir, que aparezca un leve toque amargo es una característica agradable. Según haya sido el tratamiento de dicha yerba, sus medios y finales de boca podrán ser cortos, aterciopelados, dulces y redondos o largos, persistentes, profundos y más salvajes.
+
+    
+// Aprender a percibir el mate con los cinco sentidos, poder apreciar la encantadora sencillez de la yerba mate con estas herramientas básicas que nos propone Valeria: “Lo primero que hay que hacer es 'mirar' la yerba, ya que los cuatro elementos que la componen (palo, hoja fina, hoja gruesa, polvo de hoja) deben estar balanceados, deben tener un equilibrio entre la hoja grande y la hoja chica“, explica.
+
+// "La mejor forma de preparar un mate es: \n 1-Llenar un termo con " + "agua  " + " caliente. Para que la temperatura de tu mate esté en su punto justo, asegurate de que no esté ni tibia ni hirviendo... \n" + " 2-Colocar la " + ingrediente_1 + " dentro del mate, " + " preferentemente el que el publico elije es la   " + elSuperPreferido + ", luego agregarle algun " + ingrediente_2 + " y agitar... \n 3-Le sacamos el polvo y luego le colocamos el " + ingrediente_3 + " \n 4- Introducimos la bombilla \n 5- Cebamos y compartimos un momento."

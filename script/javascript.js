@@ -31,6 +31,12 @@ if( cantTareas === todasLasTarea.length){
         var tarea1 = tareas(prompt("Ingrese la tarea:"))
         console.log(tarea1)
     }
+}else if(cantTareas<todasLasTarea.length){
+    console.log("Hay menos tareas de las que el personal puede tomar.")
+    for(let i= 1; i<= cantTareas; i++){
+        var tarea1 = tareas(prompt("(Hay menos tareas de las que el personal puede tomar)\n Ingrese la tarea:" + i))
+        console.log(tarea1)
+    }
 }else{
     console.log("Hay mas tareas de las que el personal puede tomar.")
     for(let i= 1; i<= cantTareas; i++){
