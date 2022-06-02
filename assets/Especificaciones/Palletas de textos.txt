@@ -19,3 +19,48 @@
 // Aprender a percibir el mate con los cinco sentidos, poder apreciar la encantadora sencillez de la yerba mate con estas herramientas básicas que nos propone Valeria: “Lo primero que hay que hacer es 'mirar' la yerba, ya que los cuatro elementos que la componen (palo, hoja fina, hoja gruesa, polvo de hoja) deben estar balanceados, deben tener un equilibrio entre la hoja grande y la hoja chica“, explica.
 
 // "La mejor forma de preparar un mate es: \n 1-Llenar un termo con " + "agua  " + " caliente. Para que la temperatura de tu mate esté en su punto justo, asegurate de que no esté ni tibia ni hirviendo... \n" + " 2-Colocar la " + ingrediente_1 + " dentro del mate, " + " preferentemente el que el publico elije es la   " + elSuperPreferido + ", luego agregarle algun " + ingrediente_2 + " y agitar... \n 3-Le sacamos el polvo y luego le colocamos el " + ingrediente_3 + " \n 4- Introducimos la bombilla \n 5- Cebamos y compartimos un momento."
+
+esto es para mas adelnate incorporarlo.
+
+-Yerba mate sin palo
+Empezamos describiendo el tipo de yerba mate más fuerte. Su sabor es mucho más intenso y duradero que el de cualquier otro. Esto debido a que el 90% del contenido son hojas trituradas y el restante es el palo.
+
+El porcentaje de este último no puede subirse mucho, ya que, según el código alimentario, se debe tener al menos un 90% de hojas trituradas, rotas o pulverizadas para que pueda comercializarse y el porcentaje de palo no puede superar más del 10%.
+
+-Mate con palo
+Por el contrario la yerba mate con palo es mucho más suave, ya que, el palo la hace ser el tipo de bebida más tradicional y es una buena opción para cualquiera que comienza a tomar mate.
+
+En este caso el porcentaje de hojas es del 70% y el 30% restante es del palo. La bebida debe tener al menos un 65% de hojas contra un 35% de palo.
+
+-Mate saborizada
+La yerba mate saborizada es un excelente tipo de yerba para aquellas personas que quieren siempre el mismo sabor de bebida ya que no les gusta el sabor amargo que puede llegar a tener.
+
+Las esencias más conocidas son hechas a base de sabores cítricos, como el pomelo, limón o naranja, pero también se encuentran tipos fuera de lo común, como frutos del bosque y tropicales.
+
+-Yerba compuesta
+La yerba mate compuesta contiene una gran variedad de yerbas como la manzanilla, tilo, poleo, entre otras.
+
+Este tipo de infusión es muy popular ya que se puede mezclar las propiedades básicas y naturales que trae el mate junto con todos los beneficios que las demás plantas tienen.
+
+Se recomienda tomarlo después de la cena, ya que muchas de las yerbas del mate compuesto son de carácter digestivo o producen sensaciones relajantes, perfectas para antes de ir a dormir o cuando se maneja mucho estrés.
+
+Según el código alimentario, este tipo de mate debe contener al menos un 40% de hierbas aromáticas y el 60% restante debe ser la yerba mate.
+
+-Mate Barbacuá
+Este tipo de yerba mate es de origen Guaraní por lo que su proceso consta en ser sometida a un tipo de secado. Este proceso se ha venido utilizando desde los tiempos en los que los nativos guaraníes la trataban para que fuese consumida posteriormente, de allí viene su nombre “Barbacuá”, esto significa “tostado” en guaraní.
+
+Su proceso es bastante simple por lo que ha pasado de generación en generación convirtiéndose en una tradición cultural. Primero las hojas deben ser expuestas al calor del fuego de la leña durante un día, así se logrará el famoso aspecto tostado, además, también se debe dejar la yerba sobre maderas que permiten el secado total.
+
+-Yerba mate orgánica
+La fabricación de esta yerba mate tiene un cuidado especial con el medio ambiente, ya que, desde la etapa de siembra, se evita utilizar químicos que dañen los suelos como se hace comúnmente.
+
+Además,  los envases están regulados por distintos organismos nacionales e internacionales, quienes aseguran que dichos son reciclables, tanto el envase como el empaque.
+
+En Argentina especialmente, el ministerio de agroindustria otorgó el sello de “orgánico Argentina” a todos aquellos productos que opten por preferir esta modalidad de producción, pues se minimiza el consumo de recursos no renovables y se favorece al cuidado del ecosistema. Beneficiando así tanto al suelo o las plantaciones, como también a todos de poder consumir un producto orgánico.
+
+-Yerba para tereré
+Este tipo de yerba es procesada un poco más gruesa de lo que se conoce comúnmente y se conoce como una de las bebidas típicas de Paraguay y de Argentina.
+
+Se la puede tomar con agua fría o mezclada con frutas y jugos naturales.
+
+A pesar de que el tamaño de la yerba es mayor, la cantidad que se usa es menor, lo cual ayuda a que la bombilla no quede obstruida, logrando un tipo de mate especial para servir con agua a temperatura ambiente; Si se hace lo mismo con la yerba normal, verás que será más fácil que la bombilla se tape, por lo que es mejor utilizar la técnica de menos polvo, logrando que la yerba tenga un mayor grosor.

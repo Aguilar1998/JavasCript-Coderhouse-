@@ -1,0 +1,10 @@
+
+Elemenros:
+
+puedo utilizar un array para llamar los elementos para el mate
+Minimos ingredientes y elementos para el mate
+1-yerba
+3-yuyos
+4-bombilla
+5-agua
+6-pava/termo

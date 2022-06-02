@@ -2,7 +2,7 @@
 Fondos:
 
 Fondo: rgb(77, 99, 77);
-Fondo grid: #241d1b;
+Fondo verde: #628158;
 Fondo blanco: #f5f0ed;
 
 

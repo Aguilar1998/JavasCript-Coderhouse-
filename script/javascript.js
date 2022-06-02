@@ -1,48 +1,169 @@
 
+class termos {
+    constructor(marca, litros, precio) {
+        this.marca = marca
+        this.litros = litros
+        this.precio = precio
+    }
+    constructor(tamaño, material, precio) {
+        this.tamaño = tamaño
+        this.material = material
+        this.precio = precio
+    }
+}
 
-// Desafio nro: 3
+const termos1 = new termos('stanley ', 1, 24000,)
+const termos2 = new termos('enerfit', 1/2, 9000)
+const termos3 = new termos('thermos ', 1/2, 16000)
 
-const todasLasTarea = ["backend","frontend","marketing","emprendedor","cloud","chef"]
+const carrito = []
 
-function tareas(tarea){
-    switch(tarea){
-        case todasLasTarea[0]:
-            return "La tarea de backend esta asignada a Jesus Martin Aguilar"
-        case todasLasTarea[1]:
-            return "La tarea de frontend esta asignada a Jesus Eduardo Aguilar"
-        case todasLasTarea[2]:
-            return "La tarea de marketing esta asignada a Malena Guadalupe Aguilar"
-        case todasLasTarea[3]:
-            return "La tarea de emprendedor esta asignada a Fabian Lorenzo Aguilar"
-        case todasLasTarea[4] :
-            return "La tarea de cloud esta asignada a Ivan Nicolas Aguilar"
-        case todasLasTarea[5] :
-            return "La tarea de chef esta asignada a Nilda Maria Alarcon"
+
+const mostrarMensaje = (termos) => {
+    console.log('El termos ' + termos.marca + ' de ' + termos.litros + ' cuesta $' + termos.precio)
+}
+
+
+const totalCarrito = () => {
+    let sumaTotal = 0
+    carrito.forEach((producto) => {
+        sumaTotal += producto.precio
+    })
+    return sumaTotal
+}
+
+const agregarProducto = () => {
+    const productoElegido = prompt('Elegi un termos entre: stanley, enerfit, thermos').toLowerCase()
+
+    switch (productoElegido) {
+        case 'stanley':
+            mostrarMensaje(termos1)
+            carrito.push(termos1)
+            break
+        case 'enerfit':
+            mostrarMensaje(termos2)
+            carrito.push(termos2)
+            break
+        case 'thermos':
+            mostrarMensaje(termos3)
+            carrito.push(termos3)
+            break
         default:
-            return "No hay persona asignada para esta tarea.( "  + tarea + " ) deberas contratar una nueva persona para esta tarea."
+            console.log('Por favor, ingresa una opcion correcta')
+            break
+    }
+
+    if (confirm('Desea agregar otro producto?')) {
+        agregarProducto()
+    } else {
+        console.log('Finalizo Compra, su total es de $' + totalCarrito())
+        console.log(carrito)
     }
 }
 
+agregarProducto()
 
-let cantTareas = Number(parseInt(prompt("Ingrese la cantidad de tareas que hay pendientes para asignar.")))
 
-if( cantTareas === todasLasTarea.length){
-    for(let i= 1; i<= todasLasTarea.length ; i++){
-        var tarea1 = tareas(prompt("Ingrese la tarea:"))
-        console.log(tarea1)
-    }
-}else if(cantTareas<todasLasTarea.length){
-    console.log("Hay menos tareas de las que el personal puede tomar.")
-    for(let i= 1; i<= cantTareas; i++){
-        var tarea1 = tareas(prompt("(Hay menos tareas de las que el personal puede tomar)\n Ingrese la tarea:" + i))
-        console.log(tarea1)
-    }
-}else{
-    console.log("Hay mas tareas de las que el personal puede tomar.")
-    for(let i= 1; i<= cantTareas; i++){
-        var tarea1 = tareas(prompt("(Hay mas tareas de las que el personal puede tomar)\n Ingrese la tarea:" + i))
-        console.log(tarea1)
-    }
-}
 
-tareas()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Desafio nro: 3
+// // function agunatadora(yerba){
+// //     yerba===variedadDeYerba[0]
+// // }
+
+
+// // function porCadaUno(array,funcion){
+// //     for(const elemento of array){
+// //         funcion(elemento)
+// //     }
+// // }
+
+// const variedadDeYerba = ["aguantadora","sinceridad","pampa","playadito","cbse","rosamonte"]
+
+// const mensaje = [
+//     { nombre: 'aguantadora',mensaje: "Desde Misiones, la Tierra del Oro Verde, una Yerba Mate única para acompañar tus jornadas. Encontrá la variedad que más se adapte a tus gustos en la Tienda Online"},
+//     { nombre: 'sinceridad', mensaje: ": Una Yerba Mate suave, pensada para quienes gustan de un mate muy equilibrado. Encontrá la variedad que más se adapte a tus gustos en la Tienda Online."},
+//     { nombre: 'pampa', mensaje: ": Un producto Premium. Cultivada y elaborada respetando los ritmos naturales de crecimiento. En versiones Orgánica y BCP (Bajo Contenido en Polvo)"},
+//     { nombre: 'playadito', mensaje: ": Sabor tradicional combinado con esencia de naranja. Técnica de estacionamiento natural y paquete pensado para conservar la calidad."},
+//     { nombre: 'cbse', mensaje: ": CBSé - Establecimiento Santa Ana es una empresa de bebidas orgánicas especializada en termos de yerba mate, con sede en Argentina. La empresa exporta sus termos a nivel internacional desde 2000. CBSé ofrece principalmente yerba mate de hojas sueltas con varios sabores."},
+//     { nombre: 'rosamonte', mensaje: ": Es nutritivo. Aporta vitaminas A, B, C y E, además de minerales como el potasio, sodio, hierro y magnesio a lo que se suman más de 10 aminoácidos esenciales. Previene la aparición de caries"}
+// ]
+
+// mensaje.forEach((nombre) => {
+//     console.log(nombre)
+// });
+
+
+
+
+// let cantYerbas = Number(parseInt(prompt("Ingrese la cantidad de marcas de yerbas que le gustaria conocer.")))
+
+// if( cantYerbas === variedadDeYerba.length){
+//     for(let i= 1; i<= variedadDeYerba.length; i++){
+//         const resultado = mensaje.filter((mensaje) => mensaje.nombre.includes('prog'))
+//         console.log(resultado)
+//     }
+// }else if(cantYerbas < variedadDeYerba.length){
+//     console.log("Contamos con estas variedades de yerbas: "+ variedadDeYerba )
+//     for(let i= 1; i<= cantYerbas; i++){
+//         const resultado = mensaje.filter((mensaje) => mensaje.nombre.includes('prog'))
+//         console.log(resultado)
+//     }
+// }else {
+//     console.log("no contamos con tantas varidedades por el momento, la informacion que no podamos brindarte sera investigada para incorporarla..")
+//     for(let i= 1; i<= cantYerbas; i++){
+//         const resultado = mensaje.filter((mensaje) => mensaje.nombre.includes('prog'))
+//         console.log(resultado)
+//     }
+// }
+    
+// // yerbas2()
+
+
+// // ---Tema:------
+
+// // retorna funciones 
+// // recibir funciones por parametros
+// // Métodos de búsqueda y transformación (forEach,find,filter,some,map,reduce,sort)
