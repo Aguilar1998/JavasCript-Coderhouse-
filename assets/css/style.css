@@ -78,11 +78,14 @@ main{
     justify-content: space-between;
     align-items: center;
     height: 74vh;
-    width: 100%;
+    /* width: 100%; */
+    /* max-width: 1080px; */
+    margin: auto;
 }
+
 main img{
-    object-fit: contain;
-    width: 50vw;
+    object-fit: cover;
+    max-height: 30vw;
 }
 
 main .container{
@@ -90,12 +93,14 @@ main .container{
     flex-direction: column;
     justify-content: space-between;
     text-align: start;
-    height: 30vh;
-    padding: 1rem;
+    margin: auto;
+    width: 900px;
+    /* height: 30vh; */
+    /* padding: 1rem; */
 }
 main .container h1{
-    font-size: 6vw;
-    width: 50vw;
+    font-size: 3vw;
+    /* width: 50vw; */
     margin: 1rem 0;
 }
 main .container p{
