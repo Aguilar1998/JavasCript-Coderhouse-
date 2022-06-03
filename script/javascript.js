@@ -5,11 +5,6 @@ class termos {
         this.litros = litros
         this.precio = precio
     }
-    constructor(tamaño, material, precio) {
-        this.tamaño = tamaño
-        this.material = material
-        this.precio = precio
-    }
 }
 
 const termos1 = new termos('stanley ', 1, 24000,)

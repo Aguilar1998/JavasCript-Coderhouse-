@@ -81,6 +81,7 @@ main{
     /* width: 100%; */
     /* max-width: 1080px; */
     margin: auto;
+    overflow-y: scroll;
 }
 
 main img{
@@ -122,6 +123,9 @@ footer{
     text-align: center;
     border-top: 1px solid black;
     height: 20vh;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
 }
 footer ul{
     display: flex;
@@ -153,7 +157,8 @@ footer div aside{
 
 main .galeri{
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    flex-flow: row wrap;
     max-width: 1080px;
     margin: auto;
 }
