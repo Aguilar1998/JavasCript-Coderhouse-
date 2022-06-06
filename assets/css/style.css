@@ -28,10 +28,12 @@ body {
 }
 a {
     text-decoration: none;
-    color: #0b0c0d; 
+    color: #fff;
+    border-radius: 1rem;
+    padding: 3px 1rem;
 }
 a:hover{
-    color: #628158;
+    color: #4f6847;
 }
 ul{
     list-style: none;
@@ -60,7 +62,6 @@ ul{
 
 .container__Vw{
     height: 100vh;
-    /* max-width: 1080px; */
     margin: auto;
 }
 
@@ -74,17 +75,19 @@ ul{
 /* Comienzo de mi header  */
 
 .container{
+    overflow: hidden;
+    height: 6vh;
     display: flex;
     justify-content: space-around;
-    height: 6vh;
-    border-bottom: 1px solid black;
     align-items: center;
+    background-color: #0b0c0d;
     padding: 1rem 2rem;
+    border-bottom: 1px solid black;
     margin: auto;
-    overflow: hidden;
 }
 .container img{
     width: 60px;
+    border-radius: 100%;
 }
 .container .container__List{
     display: flex;
@@ -92,30 +95,28 @@ ul{
 .container .container__List li{
     margin-left: 1rem;
 }
+.static{
+    color: #4f6847;
+}
+
 .container .container__Nav{
     display: flex;
     justify-content: space-between;
     width: 15rem;
-    height: 6vh;
+}
+.container .container__Nav a{
+    margin: auto;
 }
 .container .container__Nav .loginUp{
     border-radius: 1rem;
     padding: 5px 1rem;
-    border: 2px solid #4f6847;
-    height: max-content;
-    margin: auto;
-    width: max-content;
+    border: 2px solid #fff;
+    background-color: #0b0c0d;
+    color: #fff;
 }
-
 .container .container__Nav .loginUp:hover{
     background-color: #628158;
-    color: #fff;
-}
-.container .container__Nav .loginUp a{
     color: #0b0c0d;
-}
-.container .container__Nav .loginUp:hover a{
-    color: #fff;
 }
 
 
@@ -133,41 +134,46 @@ ul{
 .main{
     display: grid;
     grid-template-columns: repeat(1,50%);
-    grid-template-areas: 
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas:
+    "slider slider"
     "grids1 grids2";
     row-gap: 1rem;
-    height: 74vh;
+}
+.main .main__Slider{
+    grid-area: slider;
+}
+.main .main__Slider img{
+    width: 100vw;
+    height: 80vh;
+    object-fit: cover;
+    object-position: center;
 }
 .main .main__Information{
     grid-area: grids1;
     display: flex;
     flex-direction: column;
     text-align: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 50%;
     height: 30vh;
     margin: auto;
 }
 .main .main__Information button{
-    width: 10vw;
     margin: 0 auto;
     border-radius: 1rem;
-    border: 2px solid #4f6847;
-    background-color: #fff;
+    border: 2px solid #0b0c0d;
     padding: 10px;
     /* ---------------------------------------------- */
     /* outline: ;  averiguar como sacarle el border */
 }
+.main .main__Information button a{
+    color: #0b0c0d;
+    width: max-content;
+}
 .main .main__Information button:hover{
     background-color: #628158;
 }
-.main .main__Information button a{
-    color: #0b0c0d;
-}
-.main .main__Information button:hover a{
-    color: #fff;
-}
-
 .main .main__Picture{
     grid-template-areas: grids2;
     margin: auto;
@@ -195,12 +201,11 @@ ul{
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    border-top: 1px solid black;
-    height: 10vh;
+    border-top: 1px solid #fff;
     position: relative;
     bottom: 0%;
     width: 100%;
-    background-color: #fff;
+    background-color: #0b0c0d;
 }
 .footer .footer__Nav{
     display: flex;
@@ -213,18 +218,25 @@ ul{
 .footer img{
     width: 60px;
     height: 60px;
-    margin: auto;
+    margin: 1rem auto 0;
+    border-radius: 100%;
 }
 .footer .footer__Redes{
-    padding: 1rem;
+    color: white;
+    padding: 1rem 0;
     display: flex;
     justify-content: space-around;
-    border-top: 1px solid black;
+    border-top: 1px solid #fff;
 }
 .footer .footer__Redes aside{
     display: flex;
+    flex-direction: row;
+    justify-content:space-between;
     gap: 2rem;
 }
+/* .footer .footer__Redes a:hover i{ */
+    /* color: #fff; */
+/* } */
 
 
 

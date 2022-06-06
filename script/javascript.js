@@ -7,8 +7,8 @@ class termos {
     }
 }
 class mate {
-    constructor(tamaño, material, precio) {
-        this.tamaño = tamaño
+    constructor(marca, material, precio) {
+        this.marca = marca
         this.material = material
         this.precio = precio
     }
@@ -18,9 +18,9 @@ const termos1 = new termos('stanley ', 1, 24000,)
 const termos2 = new termos('enerfit', 1/2, 9000)
 const termos3 = new termos('thermos ', 1/2, 16000)
 
-const mate1 = new mate('stanley ', 1, 24000,)
-const mate2 = new mate('enerfit', 1/2, 9000)
-const mate3 = new mate('thermos', 1/2, 16000)
+const mate1 = new mate('stanley ', 'Aluminio', 24000,)
+const mate2 = new mate('enerfit', 'Aluminio', 9000)
+const mate3 = new mate('thermos', 'aluminio', 16000)
 
 const carrito = []
 
@@ -28,12 +28,14 @@ const carrito = []
 const mostrarMensaje = (termos) => {
     console.log('El termos ' + termos.marca + ' de ' + termos.litros + ' cuesta $' + termos.precio)
 }
-
+const mostrarMensaje2 = (mate) => {
+    console.log('El termos ' + mate.marca + ' de ' + mate.litros + ' cuesta $' + mate.precio)
+}
 
 const totalCarrito = () => {
     let sumaTotal = 0
-    carrito.forEach((producto) => {
-        sumaTotal += producto.precio
+    carrito.forEach((termos) => {
+        sumaTotal += termos.precio
     })
     return sumaTotal
 }
