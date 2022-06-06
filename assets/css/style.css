@@ -1,5 +1,7 @@
-/* Normalice */
 
+
+
+/* Normalice */
 
 *,
 *::after,
@@ -8,6 +10,7 @@
     padding: 0;
     box-sizing: border-box; 
 }
+
 
 html {
     font-family: "Inter", sans-serif;
@@ -30,10 +33,54 @@ a {
     text-decoration: none;
     color: #0b0c0d; 
 }
+a:hover{
+    color: #628158;
+}
 
 ul{
     list-style: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ///////////////////////////////////////////////// */
+
+
+/* Contenedor principal(Para agregarle estilos. En este caso un ancho maximo a toda mi pagina) */
+
+.container__Vh{
+    height: 100vh;
+    max-width: 1080px;
+    margin: auto;
+}
+
+
+
+
+
+
+/* ///////////////////////////////////////////////// */
+
+/* Comienzo de mi header  */
+
 .container{
     display: flex;
     justify-content: space-around;
@@ -41,15 +88,11 @@ ul{
     border-bottom: 1px solid black;
     align-items: center;
     padding: 1rem 2rem;
-    max-width: 1080px;
     margin: auto;
     overflow: hidden;
-
 }
 .container img{
     width: 60px;
-    height: 60px;
-    margin: auto;
 }
 .container .container__List{
     display: flex;
@@ -60,68 +103,110 @@ ul{
 .container .container__Nav{
     display: flex;
     justify-content: space-between;
-    width: 10rem;
+    width: 15rem;
     height: 6vh;
 }
-.container .container__Nav button{
+.container .container__Nav .loginUp{
+    border-radius: 1rem;
+    padding: 5px 1rem;
+    border: 2px solid #4f6847;
     height: max-content;
     margin: auto;
-    
+    width: max-content;
 }
-.container .container__Nav .loginUp{
+
+.container .container__Nav .loginUp:hover{
     background-color: #628158;
+    color: #fff;
+}
+.container .container__Nav .loginUp a{
+    color: #0b0c0d;
+}
+.container .container__Nav .loginUp:hover a{
+    color: #fff;
 }
 
-/* -------------------------------------------------------- */
+
+
+
+
+
+
+
+
+/* ///////////////////////////////////////////////// */
+
+/* Start of main */
+
 .main{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(1,50%);
+    grid-template-areas: 
+    "grids1 grids2";
+    row-gap: 1rem;
     height: 74vh;
-    /* width: 100%; */
-    /* max-width: 1080px; */
-    margin: auto;
-    overflow-y: scroll;
 }
-
-.main img{
-    object-fit: cover;
-    max-height: 30vw;
-}
-
 .main .main__Information{
+    grid-area: grids1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    text-align: start;
+    text-align: center;
+    justify-content: space-around;
+    width: 50%;
+    height: 30vh;
     margin: auto;
-    width: 900px;
-}
-.main .main__Information h1{
-    font-size: 5vw;
-    margin: 1rem 0;
-}
-.main .main__Information p{
-    font-size: 20px;
-    margin: 1rem 0;
 }
 .main .main__Information button{
-    width: 10rem;
-    margin: 1rem;
-    background-color: #628158;
+    width: 10vw;
+    margin: 0 auto;
     border-radius: 1rem;
+    border: 2px solid #4f6847;
+    background-color: #fff;
+    padding: 10px;
+    /* ---------------------------------------------- */
+    /* outline: ;  averiguar como sacarle el border */
+}
+.main .main__Information button:hover{
+    background-color: #628158;
+}
+.main .main__Information button a{
+    color: #0b0c0d;
+}
+.main .main__Information button:hover a{
+    color: #fff;
+}
+
+.main .main__Picture{
+    grid-template-areas: grids2;
+    margin: auto;
+}
+.main .main__Picture img{
+    width: 100%;
 }
 
 
-/* -------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+/* ///////////////////////////////////////////////// */
+
+/* Comienzo del footer */
+
 .footer{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
     border-top: 1px solid black;
-    height: 20vh;
-    position: fixed;
+    height: 10vh;
+    position: relative;
+    bottom: 0%;
     width: 100%;
     background-color: #fff;
 }
@@ -138,7 +223,6 @@ ul{
     height: 60px;
     margin: auto;
 }
-
 .footer .footer__Redes{
     padding: 1rem;
     display: flex;
@@ -151,28 +235,58 @@ ul{
 }
 
 
-/* -------------------------------------------------------- */
 
+
+
+
+
+
+
+
+/* ///////////////////////////////////////////////// */
 
 /* section galeri */
-
-.main .main__Galeri{
-    display: flex;
-    /* flex-wrap: wrap; */
-    flex-flow: row wrap;
+.galeri{
     max-width: 1080px;
     margin: auto;
 }
-
-.contenedor{
-    padding: 4em 2em;
+.galeri .main__Galeri{
     display: flex;
-    border: 2px solid white;
     flex-direction: row;
+    flex-flow: row wrap;
+    flex-basis: content;
     justify-content: center;
+    max-width: 1080px;
 }
 
-.explorador{
+
+
+
+
+
+/* Buttom */
+
+.card__Buttom{
+    width: 100%;
+    padding: 5px 1rem;
+    margin: 1rem auto;
+    border: 1px solid #4f6847;
+    border-radius: 1rem;
+    width: 250px;
+}
+.card__Buttom:hover{
+    background-color: #628158;
+    cursor: pointer;
+    color: #fff;
+}
+
+
+
+
+
+
+
+.card{
     max-width: 20em;
     margin: 1em;
     border-radius: 10px;
@@ -182,13 +296,13 @@ ul{
     flex-direction: column;
 }
 
-.explorador__Imagen{
+.card__Imagen{
     max-height: 20em;
     overflow: hidden;
     background: linear-gradient(38deg, #000428, #628158);
     border-radius: 10px 10px 0 0 ;
 }
-.explorador__Imagen img{
+.card__Imagen img{
     object-fit: cover;
     object-position: center top;
     display: block;
@@ -197,18 +311,18 @@ ul{
     max-width: 20em;
 }
 
-.explorador__Contenido{
+.card__Contenido{
     padding: 1em 1em 0;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
-.explorador__Contenido button{
+/* .card__Contenido button{
     margin: 1rem;
     border-radius: 1rem;
     background-color: #628158;
-}
-.explorador__Cabecera{
+} */
+.card__Cabecera{
     border-bottom: 1px solid rgba(0, 78, 146, 0.2);
     margin-bottom: 1em;
     display: flex;
@@ -216,12 +330,12 @@ ul{
     align-items: baseline;
 }
 
-.explorador__Nombre{
+.card__Nombre{
     margin: 0%;
     color: #004e92;
     font-style: italic;
 }
-.explorador__Bio{
+.card__Bio{
     font-size: 0.8em;
     line-height: 1.5;
     flex-grow: 1;
@@ -233,7 +347,7 @@ ul{
 @media (max-width: 600px) {
     .main{
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: space-between;
         height: 74vh;
         margin: auto;
@@ -253,4 +367,14 @@ ul{
         margin: 1rem auto;
     }
     
+}
+
+@media (max-width: 1010px) {
+    .main .main__Information{
+        text-align: center;
+        width: 40vw;
+    }
+    .main .main__Information button{
+        width: 100px;
+    }
 }
