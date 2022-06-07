@@ -17,7 +17,7 @@ const termos1 = new termos('stanley ', 1, 24000,)
 const termos2 = new termos('enerfit', 1/2, 9000)
 const termos3 = new termos('thermos ', 1/2, 16000)
 
-// Creamos un array con todos nuestros productos dentro de termos
+// Creamos un array con todos nuestros termos
 const todosLosTermos = [
     termos1,
     termos2,
@@ -84,7 +84,7 @@ agregarProducto()
 
 
 
-/* FUNCIONES */
+/* Funcion formulario */
 const baseDeDatos = {
     nombre: 'Martin',
     correo: 'Martin@Estudiante.com',
@@ -103,8 +103,6 @@ const button = (event)=>{
     }
 
     console.log('Bienvenido',nombre,', tu correo es: ', correo);
-    // console.log(nombre);
-    // console.log(correo);
 };
 
 
