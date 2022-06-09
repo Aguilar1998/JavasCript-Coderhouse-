@@ -1,0 +1,10 @@
+
+*Especificaciones de lo que el usuario puede realizar dentro de mi sitio web.
+
+-Agrgar un producto al carrito.
+-Eliminar un producto del carrito.
+-Sumar el valor de los productos en el carrito e informar el resultado de la suma.
+-Cuando presione el carrito debera visualizar los productos que selecciono mas el monto total.
+
+
+

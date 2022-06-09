@@ -1,6 +1,0 @@
-Formato: 
-    Página HTML y  código fuente en JavaScript. Debe identificar el apellido del alumno/a en el nombre de archivo comprimido por “claseApellido”. 
-
-Sugerencia: 
-    Si bien, por el momento solo podemos hacer entradas con prompt() y 
-salidas con alert() o console.log(), es suficiente para empezar a pensar el proceso a simular en términos de entradas, variables, estructuras, funciones, métodos y salidas. Verificar Rúbrica
