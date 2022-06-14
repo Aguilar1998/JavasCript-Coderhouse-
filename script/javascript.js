@@ -1,7 +1,44 @@
 
 
 
-
+let Ejcarrito = [
+    {
+        "precio": 500,
+        "id": 1,
+        "title": "Yerba",
+        "thumbnailUrl": "https://jumboargentina.vtexassets.com/arquivos/ids/621306/Yerba-Mate-La-Merced-Campo-Sur-O-c-500g-1-857355.jpg?v=637473138275470000"
+    },
+    {
+        "precio": 300,
+        "id": 2,
+        "title": "Mate",
+        "thumbnailUrl": "../Resourse/image/mate-slider3.webp"
+    },
+    {
+        "precio": 100,
+        "id": 3,
+        "title": "Termo",
+        "thumbnailUrl": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/450/256/products/termo-verde-nuevo-frente1-9ebc319aca02038ab116166160261528-640-0.jpg"
+    },
+    {
+        "precio": 50,
+        "id": 4,
+        "title": "Bombilla",
+        "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_794871-MLA48950371330_012022-O.webp"
+    },
+    {
+        "precio": 10,
+        "id": 5,
+        "title": "Mochila matera",
+        "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_999412-MLA49655019392_042022-O.webp"
+    },
+    {
+        "precio": 150,
+        "id": 6,
+        "title": "Taza",
+        "thumbnailUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1t17uGr72Ws532C9KyRiaWZX9dy6STeX8Lw&usqp=CAU"
+    }
+]
 
 
 
@@ -74,53 +111,32 @@ agregarProducto()
 // RENDERIZAR TODOS LOS PRODUCTOS
 const renderProducts = () => {
     products.forEach((product) => {
-      const { marca, litros, precio } = product;
-      productsEl.innerHTML += `
+        const { marca, litros, precio } = product;
+        productsEl.innerHTML += `
         <div class="item">
-          <div class="item-container">
-            <div class="item-img">
-              <img src="${imgSrc}" alt="${name}" />
+            <div class="item-container">
+                <div class="item-img">
+                    <img src="${imgSrc}" alt="${name}" />
+                </div>
+                <div class="desc">
+                    <h2>${name}</h2>
+                    <h2><small>$</small>${price}</h2>
+                    <p>
+                        ${description}
+                    </p>
+                </div>
+                <div class="add-to-wishlist">
+                    <img src="./icons/heart.png" alt="add to wish list">
+                </div>
+                <div class="add-to-cart" onclick="addToCart(${id})">
+                    <img src="./icons/bag-plus.png" alt="add to cart">
+                </div>
             </div>
-            <div class="desc">
-              <h2>${name}</h2>
-              <h2><small>$</small>${price}</h2>
-              <p>
-                ${description}
-              </p>
-            </div>
-            <div class="add-to-wishlist">
-                <img src="./icons/heart.png" alt="add to wish list">
-            </div>
-            <div class="add-to-cart" onclick="addToCart(${id})">
-                <img src="./icons/bag-plus.png" alt="add to cart">
-            </div>
-          </div>
         </div>
-      `;
+    `;
     });
-  };
+};
 
-// console.log('El termos ' + termos.marca + ' de ' + termos.litros + ' cuesta $' + termos.precio)
-// const renderCartItems = () => {
-//     cleanCart();
-//     cart.forEach((item) => {
-//       const { id, name, price, instock, description, imgSrc } = item;
-//       cartItemsEl.innerHTML += `
-//         <div class="cart-item">
-//           <div class="item-info" onclick="removeItemFromCart(${id})">
-//             <img src="${imgSrc}" alt="${name}" />
-//             <h4>${name}</h4>
-//           </div>
-//           <div class="unit-price"><small>$</small>${price}</div>
-//           <div class="units">
-//             <div class="btn minus" onclick="changeNumberOfUnits('minus', ${item.id})">-</div>
-//             <div class="number">${item.numberOfUnits}</div>
-//             <div class="btn plus" onclick="changeNumberOfUnits('plus', ${item.id})">+</div>
-//           </div>
-//         </div>
-//       `;
-//     });
-//   };
 
 
 
