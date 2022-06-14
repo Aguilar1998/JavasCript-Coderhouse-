@@ -1,61 +1,86 @@
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+
 console.log(document)
 
 
-class mate {
-    constructor(tamaño, material, precio) {
-        this.tamaño = tamaño
-        this.material = material
-        this.precio = precio
-    }
+const termos1 = new termos('grande ', 'stanley', 24000);
+const termos2= new termos('mediano', 'thermos', 9000);
+const termos3 = new termos('chico', 'enerfit', 16000);
+
+const mate1 = new mate('grande ', 'stanley', 4000);
+const mate2 = new mate('mediano', 'stanley', 2000);
+const mate3 = new mate('chico ', 'stanley', 1000);
+
+
+productos[
+    mate1,
+    mate2,
+    mate3,
+    termos1,
+    termos2,
+    termos3
+]
+
+console.log(productos);
+
+
+switch (productos) {
+    case mate: 
+        class mate {
+            constructor(tamaño, marca, precio) {
+                // metodo constructor (no es necesario colocar que es una funcion)
+                this.tamaño = tamaño
+                this.marca = marca
+                this.precio = precio
+            }
+            hablar(){
+                console.log("Seleccionaste un " + this.marca +" de tamaño  " + this.tamaño);
+            }
+            sumaIva(){
+                this.precio = this.precio * 1.21;
+            }
+            vender(){
+                this.vendido = true;
+            }
+        }
+        // debe ingresar los datos
+        
+        break;
+    case termos:
+        class termos {
+            constructor(tamaño, marca, precio) {
+                // Datos de los distintos termos que existen en mi sitio.
+                this.tamaño = tamaño
+                this.marca = marca
+                this.precio = precio
+            }
+            hablar(){
+                console.log("Seleccionaste un termo de marca: " + this.marca + " de " + this.tamaño + "litros");
+            }
+            sumaIva(){
+                this.precio = this.precio * 1.21;
+            }
+            vender(){
+                this.vendido = true;
+            }
+        }
+        
+        // debe ingresar los datos
+        
+        break;
+    default:
+        break;
 }
 
-const mate1 = new mate('grande ', 'aluminio', 4000)
-const mate2 = new mate('mediano', 'aluminio', 2000)
-const mate3 = new mate('chico ', 'aluminio', 1000)
-
-const carrito1 = []
 
 
-const mostrarMensaje1 = (mate) => {
-    console.log('El mate ' + mate.tamaño + ' de ' + mate.material + ' cuesta $' + mate.precio)
-}
 
 
-const totalCarrito1 = () => {
-    let sumaTotal = 0
-    carrito1.forEach((producto) => {
-        sumaTotal += producto.precio
-    })
-    return sumaTotal
-}
+productos()
 
-const agregarProducto1 = () => {
-    const productoElegido = prompt('Elegi un mate entre: grande, mediano o chico').toLowerCase()
 
-    switch (productoElegido) {
-        case 'grande':
-            mostrarMensaje1(mate1)
-            carrito1.push(mate1)
-            break
-        case 'mediano':
-            mostrarMensaje1(mate2)
-            carrito1.push(mate2)
-            break
-        case 'chico':
-            mostrarMensaje1(mate3)
-            carrito1.push(mate3)
-            break
-        default:
-            console.log('Por favor, ingresa una opcion correcta')
-            break
-    }
 
-    if (confirm('Desea agregar otro producto?')) {
-        agregarProducto1()
-    } else {
-        console.log('Finalizo Compra, su total es de $' + totalCarrito1())
-        console.log(carrito1)
-    }
-}
-
-agregarProducto1()

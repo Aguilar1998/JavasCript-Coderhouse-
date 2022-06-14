@@ -7,4 +7,29 @@
 -Cuando presione el carrito debera visualizar los productos que selecciono mas el monto total.
 
 
+Temas que requiere mi proyecto para la proxima entrega.
+
+Arrays (listo)
+
+DOM 
+console.log(document.body.card)
+(nodos raiz solo pueden derivar los head y body)
+Dos tipos de transformaciones(Nodo elemento, Nodo texto)
+
+
+
+Filtros
+
+
+*Arrow Functions
+-(el constructor de un objeto es una función que usamos para crear un nuevo objeto cada vez que sea necesario)
+
+
+
+Eventos
+LocalStorage
+
+
+
+
 

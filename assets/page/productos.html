@@ -21,6 +21,7 @@
 
 <body>
     <section class="container__Vw">
+
         <!-- start of header -->
         <header class="container">
             <ul class="container__List">
@@ -31,19 +32,23 @@
             <nav class="container__Nav">
                 <a loginUp href="login-up.html">Login up</a>
                 <a href="#">
-                    <span class="material-symbols-outlined">
+                    <span id="trolley" class="material-symbols-outlined">
                     shopping_cart
                     </span>
                 </a>
             </nav>
         </header>
         <!-- the end of the header -->
-    
-    
+        
+        
         <!-- start of main -->
         <main class="galeri">
             <section id="galeria"  class="main__Galeri">
-                <div id="productos" class="card">
+                <div class="container">
+                    <h1>Carrito</h1>
+                    <div class="row" id="items"></div>
+                </div>
+                <div id="template-card" class="card">
                     <figure class="card__Imagen">
                         <img src="../../Resourse/image/Mates/Producto 1/mate -slide1.webp" alt="Pampero">
                     </figure>
@@ -53,91 +58,13 @@
                             <span class="card__Profesion">Pampero</span>
                         </div>
                         <p class="card__Bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error natus recusandae veritatis, molestiae et accusantium sapiente laboriosam consequatur harum nam rem dolorem officiis quia temporibus ratione expedita vero aliquam. Dolorum!</p>
-                        <button class="card__Buttom">
-                            <p>Comprar</p>
+                        <button class="card__Button">
+                            Comprar
                         </button>
                     </div>
                 </div>
-    
-                <div class="card">
-                    <figure class="card__Imagen">
-                        <img src="../../Resourse/image/Mates/Producto 2/mate2-slider2.webp" alt="Re-Black">
-                    </figure>
-                    <div class="card__Contenido">
-                        <div class="card__Cabecera">
-                            <h3 class="card__Nombre">Mate</h3>
-                            <span class="card__Profesion">Re-Black</span>
-                        </div>
-                        <p class="card__Bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error natus recusandae veritatis, molestiae et accusantium sapiente laboriosam consequatur harum nam rem dolorem officiis quia temporibus ratione expedita vero aliquam. Dolorum!</p>
-                        <button class="card__Buttom">
-                            <p>Comprar</p>
-                        </button>
-                    </div>
-                </div>
-    
-                <div class="card">
-                    <figure class="card__Imagen">
-                        <img src="../../Resourse/image/Termos/Stanley/Stanley 1.webp" alt="Stanley">
-                    </figure>
-                    <div class="card__Contenido">
-                        <div class="card__Cabecera">
-                            <h3 class="card__Nombre">Termo</h3>
-                            <span class="card__Profesion">Stanley 2 litro</span>
-                        </div>
-                        <p class="card__Bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error natus recusandae veritatis, molestiae et accusantium sapiente laboriosam consequatur harum nam rem dolorem officiis quia temporibus ratione expedita vero aliquam. Dolorum!</p>
-                        <button class="card__Buttom">
-                            <p>Comprar</p>
-                        </button>
-                    </div>
-                </div>
-    
-                <div class="card">
-                    <figure class="card__Imagen">
-                        <img src="../../Resourse/image/Termos/Ontdoor/termo1-slider1.webp" alt="waterdog ubs 1 litro">
-                    </figure>
-                    <div class="card__Contenido">
-                        <div class="card__Cabecera">
-                            <h3 class="card__Nombre">Termo</h3>
-                            <span class="card__Profesion">Waterdog OBUS 1 litro</span>
-                        </div>
-                        <p class="card__Bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error natus recusandae veritatis, molestiae et accusantium sapiente laboriosam consequatur harum nam rem dolorem officiis quia temporibus ratione expedita vero aliquam. Dolorum!</p>
-                        <button class="card__Buttom ">
-                            <p>Comprar</p>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <figure class="card__Imagen">
-                        <img src="../../Resourse/image/Mates/mate2-slider1.webp" alt="">
-                    </figure>
-                    <div class="card__Contenido">
-                        <div class="card__Cabecera">
-                            <h3 class="card__Nombre">Mate</h3>
-                            <span class="card__Profesion">Stanley</span>
-                        </div>
-                        <p class="card__Bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error natus recusandae veritatis, molestiae et accusantium sapiente laboriosam consequatur harum nam rem dolorem officiis quia temporibus ratione expedita vero aliquam. Dolorum!</p>
-                        <button class="card__Buttom">
-                            <p>Comprar</p>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <figure class="card__Imagen">
-                        <img src="../../Resourse/image/Mates/Producto 3/mate4-slider4.webp" alt="">
-                    </figure>
-                    <div class="card__Contenido">
-                        <div class="card__Cabecera">
-                            <h3 class="card__Nombre">MAte</h3>
-                            <span class="card__Profesion">Thermio Termico</span>
-                        </div>
-                        <p class="card__Bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error natus recusandae veritatis, molestiae et accusantium sapiente laboriosam consequatur harum nam rem dolorem officiis quia temporibus ratione expedita vero aliquam. Dolorum!</p>
-                        <button class="card__Buttom">
-                            <p>Comprar</p>
-                        </button>
-                    </div>
-                </div>
+                
+                
             </section>
         </main>
         <!-- the end of the main -->
@@ -164,9 +91,18 @@
         </footer>
 
         <!-- the end footer  -->
-        <!-- script js -->
-        <script src="../../script/javascript.js"></script>
-        <!-- <script src="/script/mate.js"></script> -->
+      
+
+
+
+        <!-- Ruteos para los distintos js -->
+
+        <!-- <script src="../../script/keywords.js"></script> -->
+        <!-- <script src="../../script/class.js"></script> -->
+        <!-- <script src="../../script/events.js"></script> -->
+        <!-- <script src="../../script/functions.js"></script> -->
+        <script src="../../script/methods.js"></script>
+        <script src="../../script/app.js"></script>
     </section>
 </body>
 </html>

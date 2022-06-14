@@ -314,7 +314,6 @@ ul{
     margin: 1rem auto;
     border: 1px solid #4f6847;
     border-radius: 1rem;
-    width: 250px;
 }
 .card__Buttom:hover{
     background-color: #628158;
@@ -456,38 +455,6 @@ ul{
     .container .container__Nav .loginUp{
         padding: 0px;
     }
-
-    /* .container{
-        flex-direction: column-reverse;
-        position: fixed;
-        top: 0%;
-        margin: 0%;
-        padding: 0%;
-        justify-content: space-around;
-        font-size: 7px;
-        width: 100%;
-        height: 4rem;
-    }
-    .container .logotipo{
-        display: none;
-    }
-    .container .container__Nav{
-        width: 100%;
-        justify-content: space-around;
-    }
-    .container .container__Nav a{
-        margin: auto 0;
-    }
-    .container .container__List{
-         margin: auto;
-        text-align: center;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        padding: 0%;
-        width: 100%;
-
-    } */
     .galeri .main__Galeri{
         padding-top: 4rem;
     }

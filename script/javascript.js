@@ -118,29 +118,6 @@ form.addEventListener('submit', button);
 
 
 
-// Hola Jesús!
-
-// Creo que me confundiste con el otro tutor jajaja, pero no pasa nada
-
-// Me gustaría comentarte que tu JS va muy bien, veo que incluso ya has incorporado evento con los cuales podemos interactuar, veo que tienes el login, un pequeño consejo para que ese registro te lleve a otra página con lo que quieras mostrar podrías usar en tu if lo siguiente una vez que el input sea valido, es decir, en la condición donde indica que el input es correcto podrías colocar lo siguiente:
-
-// 	window.location.href = 'http://www.google.com';
-// Claro que tu página sería el archivo html a donde quieras dirigirte.
-
-
-
-// Por otra parte sería muy bueno que pudieras generar tus productos con JS, simplemente que los dibuje con un forEach sería genial, en esa pagina de productos, si tienes alguna duda de como realizar esto puedes preguntarme o checar el proyecto ejemplo que les compartí anteriormente, si pudieras lograr eso sería genial.
-
-
-
-// Te hago la devolución para que intentemos hacer esto de más nivel, vale?
-
-
-
-// Espero que se comprenda muy bien la devolución, para cualquier duda que tengas me puedes consultar.
-
-// Saludos!
-
 todosLosTermos.forEach(mostrarTermos => {
     console.log("mostrar mensaje");
 });
@@ -207,41 +184,41 @@ todosLosTermos.forEach(mostrarTermos => {
 
 // //////////////////////////////////////////////////////////
 
-// // Clase 10
+// Clase 10
 
-// // Definir Storage.
-// // Identificar y diferenciar localStorage y sessionStorage.
-// // Definir JSON y entender su alcance y utilidad en cada situación.
+// Definir Storage.
+// Identificar y diferenciar localStorage y sessionStorage.
+// Definir JSON y entender su alcance y utilidad en cada situación.
 
 
-// // LOCALSTORAGE: SETITEM
-// // Se almacenan en el navegador de forma indefinida
+// LOCALSTORAGE: SETITEM
+// Se almacenan en el navegador de forma indefinida
 
-// // Método ->  localStorage.setItem(clave, valor)
-// // clave = nombre para identificar el elemento 
-// // valor = valor/contenido del elemento 
-// localStorage.setItem('bienvenida', '¡Hola Coder!');
-// localStorage.setItem('esValido', true);
-// localStorage.setItem('unNumero', 20);
+// Método ->  localStorage.setItem(clave, valor)
+// clave = nombre para identificar el elemento 
+// valor = valor/contenido del elemento 
+localStorage.setItem('bienvenida', '¡Hola Coder!');
+localStorage.setItem('esValido', true);
+localStorage.setItem('unNumero', 20);
 
-// // Recorriendo el storage
-// for (let i = 0; i < localStorage.length; i++) {
-//     const clave = localStorage[i];
-//     console.log("clave: " + clave);
-//     console.log("valor: " + localStorage.getItem(clave));
-// }
+// Recorriendo el storage
+for (let i = 0; i < localStorage.length; i++) {
+    const clave = localStorage[i];
+    console.log("clave: " + clave);
+    console.log("valor: " + localStorage.getItem(clave));
+}
 
-// const isDArkMode = localStorage.getItem('isDarkMode')
-// console.log(isDarkMode);
-// // importante comprobar que sea true...
-// if (!isDarkMode) {
-//     alert('Dark Mode Activado')
-// }else{
-//     alert('Dark Mode no esta activado')
-// }
+const isDArkMode = localStorage.getItem('isDarkMode')
+console.log(isDarkMode);
+// importante comprobar que sea true...
+if (!isDarkMode) {
+    alert('Dark Mode Activado')
+}else{
+    alert('Dark Mode no esta activado')
+}
 
-// // localStorage.clear()
-// // Esto es para eliminar todo!
+// localStorage.clear()
+// Esto es para eliminar todo!
 
 
 
