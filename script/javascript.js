@@ -13,9 +13,9 @@ class termos {
     }
 }
 
-const termos1 = new termos('stanley ', 1, 24000,)
-const termos2 = new termos('enerfit', 1/2, 9000)
-const termos3 = new termos('thermos ', 1/2, 16000)
+const termos1 = new termos('stanley ', 1, 24000, img: url = ("https://cdn.shopify.com/s/files/1/0238/5366/2285/products/14.2verde_2000x.jpg?v=1605274036"))
+const termos2 = new termos('enerfit', 1/2, 9000,  img: url = ("https://cdn.shopify.com/s/files/1/0238/5366/2285/products/14.2verde_2000x.jpg?v=1605274036"))
+const termos3 = new termos('thermos ', 1/2, 16000,  img: url = ("https://cdn.shopify.com/s/files/1/0238/5366/2285/products/14.2verde_2000x.jpg?v=1605274036"))
 
 // Creamos un array con todos nuestros termos
 const todosLosTermos = [
@@ -71,10 +71,56 @@ const agregarProducto = () => {
 agregarProducto()
 
 
+// RENDERIZAR TODOS LOS PRODUCTOS
+const renderProducts = () => {
+    products.forEach((product) => {
+      const { marca, litros, precio } = product;
+      productsEl.innerHTML += `
+        <div class="item">
+          <div class="item-container">
+            <div class="item-img">
+              <img src="${imgSrc}" alt="${name}" />
+            </div>
+            <div class="desc">
+              <h2>${name}</h2>
+              <h2><small>$</small>${price}</h2>
+              <p>
+                ${description}
+              </p>
+            </div>
+            <div class="add-to-wishlist">
+                <img src="./icons/heart.png" alt="add to wish list">
+            </div>
+            <div class="add-to-cart" onclick="addToCart(${id})">
+                <img src="./icons/bag-plus.png" alt="add to cart">
+            </div>
+          </div>
+        </div>
+      `;
+    });
+  };
 
-
-
-
+// console.log('El termos ' + termos.marca + ' de ' + termos.litros + ' cuesta $' + termos.precio)
+// const renderCartItems = () => {
+//     cleanCart();
+//     cart.forEach((item) => {
+//       const { id, name, price, instock, description, imgSrc } = item;
+//       cartItemsEl.innerHTML += `
+//         <div class="cart-item">
+//           <div class="item-info" onclick="removeItemFromCart(${id})">
+//             <img src="${imgSrc}" alt="${name}" />
+//             <h4>${name}</h4>
+//           </div>
+//           <div class="unit-price"><small>$</small>${price}</div>
+//           <div class="units">
+//             <div class="btn minus" onclick="changeNumberOfUnits('minus', ${item.id})">-</div>
+//             <div class="number">${item.numberOfUnits}</div>
+//             <div class="btn plus" onclick="changeNumberOfUnits('plus', ${item.id})">+</div>
+//           </div>
+//         </div>
+//       `;
+//     });
+//   };
 
 
 
@@ -99,6 +145,9 @@ const button = (event)=>{
         return;
     }else if ( (nombre!==baseDeDatos.nombre)) {
         console.log('Este proyecto no fue creado por ti!');
+        return;
+    }else if (!nombre && !correo){
+        window.location.href = 'http://www.google.com';
         return;
     }
 
@@ -149,3 +198,25 @@ form.addEventListener('submit', button);
 
 
 
+    Hola Jesús!
+
+    Creo que me confundiste con el otro tutor jajaja, pero no pasa nada
+    
+    Me gustaría comentarte que tu JS va muy bien, veo que incluso ya has incorporado evento con los cuales podemos interactuar, veo que tienes el login, un pequeño consejo para que ese registro te lleve a otra página con lo que quieras mostrar podrías usar en tu if lo siguiente una vez que el input sea valido, es decir, en la condición donde indica que el input es correcto podrías colocar lo siguiente:
+    
+        window.location.href = 'http://www.google.com';
+    Claro que tu página sería el archivo html a donde quieras dirigirte.
+    
+    
+    
+    Por otra parte sería muy bueno que pudieras generar tus productos con JS, simplemente que los dibuje con un forEach sería genial, en esa pagina de productos, si tienes alguna duda de como realizar esto puedes preguntarme o checar el proyecto ejemplo que les compartí anteriormente, si pudieras lograr eso sería genial.
+    
+    
+    
+    Te hago la devolución para que intentemos hacer esto de más nivel, vale?
+    
+    
+    
+    Espero que se comprenda muy bien la devolución, para cualquier duda que tengas me puedes consultar.
+    
+    Saludos!
