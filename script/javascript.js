@@ -1,10 +1,5 @@
 
 
-
-
-
-
-
 class termos {
     constructor(marca, litros, precio) {
         this.marca = marca
@@ -13,17 +8,9 @@ class termos {
     }
 }
 
-const termos1 = new termos('stanley ', 1, 24000,)
-const termos2 = new termos('enerfit', 1/2, 9000)
-const termos3 = new termos('thermos ', 1/2, 16000)
-
-// Creamos un array con todos nuestros termos
-const todosLosTermos = [
-    termos1,
-    termos2,
-    termos3
-]
-
+const mate1 = new mate('grande ', 'aluminio', 4000)
+const mate2 = new mate('mediano', 'aluminio', 2000)
+const mate3 = new mate('chico ', 'aluminio', 1000)
 
 const carrito = []
 
@@ -82,8 +69,6 @@ agregarProducto()
 
 
 
-
-
 /* Funcion formulario */
 const baseDeDatos = {
     nombre: 'Martin',
@@ -99,6 +84,9 @@ const button = (event)=>{
         return;
     }else if ( (nombre!==baseDeDatos.nombre)) {
         console.log('Este proyecto no fue creado por ti!');
+        return;
+    }else if (!nombre && !correo){
+        window.location.href = 'http://www.google.com';
         return;
     }
 
@@ -170,10 +158,14 @@ todosLosTermos.forEach(mostrarTermos => {
 
 
 
+    renderProducts();
+    ejCarrito();
 
 
 
+    Hola Jesús!
 
+<<<<<<< HEAD
 
 
 
@@ -339,3 +331,25 @@ if (!isDarkMode) {
 // //Ahora tenemos objetos productos y podemos usar sus métodos
 // for (const producto of productos)
 //     producto.sumaIva();
+=======
+    Creo que me confundiste con el otro tutor jajaja, pero no pasa nada
+    
+    Me gustaría comentarte que tu JS va muy bien, veo que incluso ya has incorporado evento con los cuales podemos interactuar, veo que tienes el login, un pequeño consejo para que ese registro te lleve a otra página con lo que quieras mostrar podrías usar en tu if lo siguiente una vez que el input sea valido, es decir, en la condición donde indica que el input es correcto podrías colocar lo siguiente:
+    
+        window.location.href = 'http://www.google.com';
+    Claro que tu página sería el archivo html a donde quieras dirigirte.
+    
+    
+    
+    Por otra parte sería muy bueno que pudieras generar tus productos con JS, simplemente que los dibuje con un forEach sería genial, en esa pagina de productos, si tienes alguna duda de como realizar esto puedes preguntarme o checar el proyecto ejemplo que les compartí anteriormente, si pudieras lograr eso sería genial.
+    
+    
+    
+    Te hago la devolución para que intentemos hacer esto de más nivel, vale?
+    
+    
+    
+    Espero que se comprenda muy bien la devolución, para cualquier duda que tengas me puedes consultar.
+    
+    Saludos!
+>>>>>>> complementario
