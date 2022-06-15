@@ -21,13 +21,14 @@ const renderizarListaProductos = () =>{
     allproductos.forEach(producto => {
         const productoCard = document.createElement('section')
         productoCard.className = 'main__Galeri'
+        productoCard.className = 'main__Galeri'
         productoCard.setAttribute('data-id', producto.id)
         productoCard.innerHTML = `
         <div id="productos" class="card">
-        <figure class="card__Imagen">
-            <img src="${producto.thumbnailUrl}" alt="${producto.marca}">
-        </figure>
-        <div class="card__Contenido">
+            <figure class="card__Imagen">
+                <img src="${producto.thumbnailUrl}" alt="${producto.marca}">
+            </figure>
+            <div class="card__Contenido">
             <div class="card__Cabecera">
                 <h3 class="card__Nombre">$${producto.precio}</h3>
                 <span class="card__Profesion">${producto.marca}</span>

@@ -1,3 +1,6 @@
+
+
+
 class productos {
     constructor(marca, material, precio, id, thumbnailUrl ) {
         this.marca = marca
@@ -16,4 +19,4 @@ const yerba = new productos('Yerba aguantadora ', 'En paquete', 1000, 3, 'https:
 const taza = new productos('taza para cafe ', 'ceramica', 1000, 3, 'https://www.hola.com/imagenes/seleccion/20200918175443/tazas-bonitas-practicas-oficina/0-866-303/tazas-blanco-negro-oficina-a.jpg' )
 
 
-edadUsuario >= 18 ? console.log('puede pasar'): console.log('no puede pasar')
+// edadUsuario >= 18 ? console.log('puede pasar'): console.log('no puede pasar')
