@@ -20,7 +20,7 @@ const productosListContainer = document.querySelector('.main__Galeri')
 const renderizarListaProductos = () =>{
     allproductos.forEach(producto => {
         const productoCard = document.createElement('section')
-        productoCard.className = 'main__Galeria'
+        productoCard.className = 'main__Galeri'
         productoCard.setAttribute('data-id', producto.id)
         productoCard.innerHTML = `
         <div id="productos" class="card">
@@ -43,6 +43,9 @@ const renderizarListaProductos = () =>{
     });
 }
 
+const renderizarDatosProductos =(e)= >{
+    console.log(e.target);
+}
 
 
 // EventListeners
@@ -52,4 +55,3 @@ const renderizarListaProductos = () =>{
 // Ejecucioones
 
 renderizarListaProductos()
->>>>>>> complementario
