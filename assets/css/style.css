@@ -331,6 +331,22 @@ ul{
 
 
 
+.seleccionButton{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 50%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+.tituloButton{
+    width: 100%;
+    text-align: center;
+}
+
+
 
 /* ///////////////////////////////////////////////// */
 

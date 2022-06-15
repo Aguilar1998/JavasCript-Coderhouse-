@@ -44,18 +44,6 @@ const renderizarListaProductos = () =>{
 }
 
 
-// const accionarProductos = () =>{
-//     allproductos.forEach(producto => {
-//         const productoButton = document.createElement('section')
-//         productoButton.className = 'button'
-//         productoButton.setAttribute('data-id', producto.id)
-//         productoButton.innerHTML = `
-//                 <span>Comprar</span>
-//         `;
-//         productosListContainer.append(productoButton)
-//     });
-// }
-
 
 // EventListeners
 
@@ -64,4 +52,3 @@ const renderizarListaProductos = () =>{
 // Ejecucioones
 
 renderizarListaProductos()
-// accionarProductos()
