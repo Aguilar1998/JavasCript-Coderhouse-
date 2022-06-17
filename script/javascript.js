@@ -8,9 +8,9 @@ class termos {
     }
 }
 
-const mate1 = new mate('grande ', 'aluminio', 4000)
-const mate2 = new mate('mediano', 'aluminio', 2000)
-const mate3 = new mate('chico ', 'aluminio', 1000)
+const termos1 = new termos('grande ', 'aluminio', 4000)
+const termos2 = new termos('mediano', 'aluminio', 2000)
+const termos3 = new termos('chico ', 'aluminio', 1000)
 
 const carrito = []
 
@@ -113,50 +113,3 @@ form.addEventListener('submit', button);
 
 
 
-// Agregar Nodos:
-// paso 1: crear un elemento en blanco
-// ej:
-    const contenedor = document.createElement('div')
-
-
-
-// paso 2: Darle un contenido a mi elemento creado
-// Se puede implementar una card completa? 
-    // ej:
-    contenedor.innerHTML = '<p>Para saber mas sobre nuestros productos registrate y envianos un mensaje para que podamos brindarte informacion al respecto.</p>'
-
-
-// paso 3: Asignar nuestro contenedor creado como hijo de otro elemento.
-// Antes de este paso, tengo que haber accedido a mi elemento padre.
-    // ej:
-    const galeria = document.getElementById('galeria')
-    galeria.append(contenedor)
-
-
-    renderProducts();
-    ejCarrito();
-
-
-
-    Hola Jesús!
-
-    Creo que me confundiste con el otro tutor jajaja, pero no pasa nada
-    
-    Me gustaría comentarte que tu JS va muy bien, veo que incluso ya has incorporado evento con los cuales podemos interactuar, veo que tienes el login, un pequeño consejo para que ese registro te lleve a otra página con lo que quieras mostrar podrías usar en tu if lo siguiente una vez que el input sea valido, es decir, en la condición donde indica que el input es correcto podrías colocar lo siguiente:
-    
-        window.location.href = 'http://www.google.com';
-    Claro que tu página sería el archivo html a donde quieras dirigirte.
-    
-    
-    
-    Por otra parte sería muy bueno que pudieras generar tus productos con JS, simplemente que los dibuje con un forEach sería genial, en esa pagina de productos, si tienes alguna duda de como realizar esto puedes preguntarme o checar el proyecto ejemplo que les compartí anteriormente, si pudieras lograr eso sería genial.
-    
-    
-    
-    Te hago la devolución para que intentemos hacer esto de más nivel, vale?
-    
-    
-    
-    Espero que se comprenda muy bien la devolución, para cualquier duda que tengas me puedes consultar.
-    
-    Saludos!
