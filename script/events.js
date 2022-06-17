@@ -20,7 +20,6 @@ const button = (event)=>{
         window.location.href = 'http://www.google.com';
         return;
     }
-
     console.log('Bienvenido',nombre,', tu correo es: ', correo);
 };
 

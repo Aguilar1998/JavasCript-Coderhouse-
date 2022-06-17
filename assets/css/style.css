@@ -76,7 +76,7 @@ ul{
 
 .container{
     overflow: hidden;
-    height: 6vh;
+    height: 9vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -273,7 +273,7 @@ ul{
     flex-direction: row;
     justify-content:space-between;
     gap: 2rem;
-} s
+}
 /* .footer .footer__Redes a:hover i{ */
     /* color: #fff; */
 /* } */
@@ -292,14 +292,14 @@ ul{
 /* section galeri */
 .galeri{
     display: flex;
-    max-width: 1080px;
+    justify-content: flex-start;
 }
 .galeri .main__Galeri{
     display: flex;
     flex-direction: row;
     flex-flow: row wrap;
     flex-basis: content;
-    justify-content: center;
+    justify-content: flex-end;
     max-width: 1080px;
     margin: auto;
 }
@@ -314,12 +314,12 @@ ul{
 /* Buttom */
 
 .card__Buttom{
-    width: 100%;
+    width: 300px;
     padding: 5px 1rem;
     margin: 1rem auto;
     border: 1px solid #4f6847;
     border-radius: 1rem;
-    width: 250px;
+    background-color: #fff;
 }
 .card__Buttom:hover{
     background-color: #628158;
@@ -332,11 +332,12 @@ ul{
 
 
 .seleccionButton{
+    /* max-height: 50vh; */
+    height: max-content;
+    width: 21%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 50%;
-    margin: 1rem auto;
     padding: 1rem;
     border: 1px solid black;
     border-radius: 1rem;

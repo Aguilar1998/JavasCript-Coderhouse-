@@ -3,6 +3,7 @@
 // Declaraciones
 const allproductos = [termo, bombilla, mochilaMatera, mate, yerba, taza]
 
+const allButton = [termoButton, bombillaButton, mochilaMateraButton, mateButton, yerbaButton, tazaButton]
 
 
 
@@ -11,6 +12,7 @@ const allproductos = [termo, bombilla, mochilaMatera, mate, yerba, taza]
 
 const productosListContainer = document.querySelector('.main__Galeri')
 
+const ListContainer = document.querySelector('.seleccionButton')
 
 
 
@@ -20,7 +22,7 @@ const productosListContainer = document.querySelector('.main__Galeri')
 const renderizarListaProductos = () =>{
     allproductos.forEach(producto => {
         const productoCard = document.createElement('section')
-        productoCard.className = 'main__Galerigo'
+        productoCard.className = 'main__Galeri'
         productoCard.setAttribute('data-id', producto.id)
         productoCard.innerHTML = `
         <div id="productos" class="card">
@@ -43,7 +45,29 @@ const renderizarListaProductos = () =>{
     });
 }
 
+const listButton = () =>{
+    allButton.forEach(buttonCardList => {
+        const buttonCard2 = document.createElement('button')
+        buttonCard2.className = 'card__Buttom'
+        buttonCard2.setAttribute('data-id', buttonCardList.id)
+        buttonCard2.innerHTML = `
+        <span>
+            ${buttonCardList.name}
+        </span>
+        `;
+        ListContainer.append(buttonCard2)
+    });
+}
 
+
+
+// const renderizarDatosProductos =(e) =>{
+    
+// }
+const agregarListenerButton =()=>{
+    const productoCardButton = document.querySelector('.card__Buttom') 
+    productoCardButton.addEventListeners('click',renderizarDatosProductos)
+}
 
 // EventListeners
 
@@ -52,3 +76,4 @@ const renderizarListaProductos = () =>{
 // Ejecucioones
 
 renderizarListaProductos()
+listButton()
