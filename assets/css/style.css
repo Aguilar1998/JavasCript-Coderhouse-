@@ -293,6 +293,7 @@ ul{
 .galeri{
     display: flex;
     justify-content: flex-start;
+    margin: 2rem;
 }
 .galeri .main__Galeri{
     display: flex;
@@ -313,7 +314,7 @@ ul{
 
 /* Buttom */
 
-.card__Buttom{
+.card__Button{
     width: 300px;
     padding: 5px 1rem;
     margin: 1rem auto;
@@ -321,26 +322,37 @@ ul{
     border-radius: 1rem;
     background-color: #fff;
 }
-.card__Buttom:hover{
+.card__Button:hover{
     background-color: #628158;
     cursor: pointer;
     color: #fff;
 }
 
 
-
+.seleccionarProducto{
+    width: 300px;
+    padding: 5px 1rem;
+    margin: 1rem auto;
+    border: 1px solid #4f6847;
+    border-radius: 1rem;
+    background-color: #fff;
+}
+.seleccionarProducto:hover{
+    background-color: #628158;
+    cursor: pointer;
+    color: #fff;
+}
 
 
 .seleccionButton{
-    /* max-height: 50vh; */
     height: max-content;
     width: 21%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 1rem;
-    border: 1px solid black;
-    border-radius: 1rem;
+    /* border-top: 1px solid black;
+    border-bottom: 1px solid black; */
 }
 .tituloButton{
     width: 100%;
