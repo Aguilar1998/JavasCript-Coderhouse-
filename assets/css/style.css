@@ -31,6 +31,7 @@ a {
     color: #fff;
     border-radius: 1rem;
     margin: 1rem;
+    width: max-content;
 }
 a:hover{
     color: #4f6847;
@@ -140,6 +141,7 @@ ul{
 }
 .container .container__Nav a{
     margin: auto;
+    width: 100%;
 }
 .container .container__Nav .loginUp{
     border-radius: 1rem;
@@ -487,4 +489,20 @@ ul{
     .main .main__Information button{
         margin: 1rem auto;
     }
+}
+
+
+
+
+
+.cart{
+    width: 30vw;
+    height: 80vh;
+    border: 1px solid #4f6847;
+}
+.cart .cart__header{
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+    border-bottom: 1px solid #0b0c0d;
 }

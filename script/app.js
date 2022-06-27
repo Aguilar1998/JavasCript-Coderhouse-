@@ -99,7 +99,34 @@ const mostrarTodosLosProductos = (e) =>{
         divCuenta.innerHTML = arr.length
     }
 }
+// // ACTUALIZAR EL CARRITO
+// const updateCart = () => {
+//     mostrarTodosLosProductos();
+//     getTotal();
+    
+//     // guardar el array en el localStorage
+//     localStorage.setItem("CART", JSON.stringify(cart));
+// };
 
+// // array del carrito
+// let main__Galeri = JSON.parse(localStorage.getItem("CART")) || [];
+// updateCart();
+
+// // AÑADIR AL CARRITO
+// const addToCart = (id) => {
+//     // checar si un producto ya está en el carrito
+//     if (cart.some((item) => item.id === id)) {
+//         changeNumberOfUnits("plus", id);
+//     } else {
+//         const item = products.find((product) => product.id === id);
+//         cart.push({
+//         ...item,
+//         numberOfUnits: 1,
+//         });
+//     }
+
+//     updateCart();
+// };
 // variable para mostrar todos los productos
 const agregarProductosConBoton = document.querySelector('.todosLosProductos')
 console.log(agregarProductosConBoton);
