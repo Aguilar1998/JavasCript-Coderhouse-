@@ -3,7 +3,14 @@
 // Declaraciones
 const allproductos = [termo, bombilla, mochilaMatera, mate, yerba, taza]
 
-const allButton = [termoButton, bombillaButton, mochilaMateraButton, mateButton, yerbaButton, tazaButton]
+const allButton = [
+    termoButton, 
+    bombillaButton,
+    mochilaMateraButton, 
+    mateButton, 
+    yerbaButton, 
+    tazaButton
+]
 
 
 
@@ -21,6 +28,8 @@ const eventButton = document.querySelector('.card__Button')
 const mostrarmensaje = () =>{
     console.log('Evento escuchado');
 }
+
+
 
 const mostrarTodosLosProductos = (e) =>{
     console.log(e.target);
@@ -57,16 +66,38 @@ const mostrarTodosLosProductos = (e) =>{
     let carritoCompra = []
 
     const mostrarDatosDelBoton = (e) =>{
-       const datoDeLosProductos = e.target.getAttribute('data-id');
-       const product = allproductos.find(miProducto => miProducto.marca == datoDeLosProductos)
-       carritoCompra.push(product)
-       console.log(carritoCompra);    
+        const datoDeLosProductos = e.target.getAttribute('data-id');
+        const product = allproductos.find(miProducto => miProducto.marca == datoDeLosProductos)
+        carritoCompra.push(product)
+        // console.log(carritoCompra);   
+        console.log('carrito', carritoCompra)
+        mostrarTotal(getTotal(carritoCompra))
+        mostrarCarrito(carritoCompra) 
     }
 
     const botonesReferencias =document.querySelectorAll('.card__Button')
     botonesReferencias.forEach(agregarAlCarrito => {
         agregarAlCarrito.addEventListener('click', mostrarDatosDelBoton)
     });
+
+    //get total carrito
+    const getTotal = (arr) => {
+        let total = 0
+        arr.forEach((producto) => {
+            total += producto.precio
+        })
+        return total
+    }
+    //pintar total carrito
+    const mostrarTotal = (total) => {
+        const divTotal = document.querySelector('#total-carrito')
+        divTotal.innerHTML = total.toLocaleString()
+    }
+    //pintar cuenta carrito
+    const mostrarCarrito = (arr) => {
+        const divCuenta = document.querySelector('.cuenta-carrito')
+        divCuenta.innerHTML = arr.length
+    }
 }
 
 // variable para mostrar todos los productos

@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ElMejorMAte | Home | TodoSobreElMate</title>
-    <!-- linl del css -->
+    <!-- Link de bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- link del css -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -20,9 +22,12 @@
             </ul>
             <a href="index.html"><img src="assets/image/Logotipo.jpg" alt="Logotipo"></a>
             <nav class="container__Nav">
-                <a href="#">Login up</a>
-                <button class="loginUp">
-                    <i class="fa-regular fa-cart-circle-arrow-up">car</i>
+                <a  href="login-up.html">Login up</a>
+                <button class="cart" >
+                    <a href="#">
+                            <span class="cuenta-carrito">0</span><i class="fa-solid fa-cart-plus"></i>
+                            <p>Total: <span>$</span><span id="total-carrito">0</span></p>
+                    </a>
                 </button>
             </nav>
         </header>
@@ -31,11 +36,34 @@
 
         <!-- start of main -->
         <main class="main">
-
             <picture class="main__Slider">
-                <img src="assets/image/Fondo principal 2.png" alt="Imagen de una persona cebando mate">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active ">
+                            <img src="assets/image/Fondo-2-slider1.jpg" class="d-flex w-40" alt="compartiendo mate">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/image/Fondo-2-slider3.jpg" class="d-block w-100" alt="mate en el campo">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/image/Fondo principal 2.png" class="d-block w-100" alt="Mate y termo negro">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </picture>
-
             <section class="main__Information">
                 <h1>How to prepare a good mate</h1>
                 <p>te contamos como cebar un buen mate para que puedas disfrutar los de mejores y darte acceso a los mejores productos desde nuestra tienda</p>
@@ -72,10 +100,13 @@
         <!-- the end of footer  -->
 
 
-        <!-- link de font awesome -->
+        <!-- Script de bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <!-- Script de font awesome -->
         <script src="https://kit.fontawesome.com/19c7f2fb8c.js" crossorigin="anonymous"></script>
     
-        <script src="script/javascript.js"></script>
+        <!-- <script src="script/javascript.js"></script> -->
         <!-- <script src="/script/mate.js"></script> -->
     </section>
 </body>

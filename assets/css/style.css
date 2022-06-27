@@ -30,7 +30,7 @@ a {
     text-decoration: none;
     color: #fff;
     border-radius: 1rem;
-    padding: 3px 1rem;
+    margin: 1rem;
 }
 a:hover{
     color: #4f6847;
@@ -42,12 +42,46 @@ ul{
 
 
 
+#carrito-logo{
+    font-size: 3rem;
+    color: #fff;
+}
+.cuenta-carrito{
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bolder;
+    background-color: red;
+    padding: 0.2rem 0.5rem;
+    border-radius: 60px;
+}
+.container .container__Nav .cart{
+    border-radius: 1rem;
+    padding: 5px 1rem;
+    border: none;
+    background-color: #0b0c0d;
+    color: #fff;
+}
+.container .container__Nav .cart a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: max-content;
+}
+.container .container__Nav button div p span{
+    color: #fff;
+}
 
+.todosLosProductos{
+    border-radius: 20px;
+    border: 1px solid #4f6847;
+    background-color: #fff;
+    padding: 0 1rem;
+}
 
-
-
-
-
+.todosLosProductos:hover{
+    background-color: #628158;
+    color: #fff;
+}
 
 
 
@@ -75,6 +109,7 @@ ul{
 /* Comienzo de mi header  */
 
 .container{
+    max-width: 100%;
     overflow: hidden;
     height: 9vh;
     display: flex;
@@ -108,7 +143,6 @@ ul{
 }
 .container .container__Nav .loginUp{
     border-radius: 1rem;
-    padding: 5px 1rem;
     border: 2px solid #fff;
     background-color: #0b0c0d;
     color: #fff;
@@ -345,14 +379,12 @@ ul{
 
 
 .seleccionButton{
-    height: max-content;
+    height: 60vh;
     width: 21%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 1rem;
-    /* border-top: 1px solid black;
-    border-bottom: 1px solid black; */
 }
 .tituloButton{
     width: 100%;
