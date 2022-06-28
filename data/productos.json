@@ -1,0 +1,49 @@
+{
+    "data":[
+        {
+            "marca":"Termo Stanley",
+            "material": "aluminio",
+            "precio": "4000",
+            "id": "1",
+            "thumbnailUrl": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/450/256/products/termo-verde-nuevo-frente1-9ebc319aca02038ab116166160261528-640-0.jpg"
+        },
+        {
+            "marca":"Bombilla Campero",
+            "material": "aluminio",
+            "precio": "2000",
+            "id": "2",
+            "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_794871-MLA48950371330_012022-O.webp"
+        },
+        {
+            "marca":"Mochila Matera Enerfit",
+            "material": "Lona",
+            "precio": "1000",
+            "id": "3",
+            "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_999412-MLA49655019392_042022-O.webp"
+        },
+        {
+            "marca":"Mate pampero",
+            "material": "madera",
+            "precio": "1000",
+            "id": "4",
+            "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_929154-MLA48771796965_012022-O.webp"
+        },
+        {
+            "marca":"Yerba aguantadora",
+            "material": "En paquete",
+            "precio": "1000",
+            "id": "5",
+            "thumbnailUrl": "https://yerbamateargentina.org.ar/imagenes/archivos/productos/21331_imagen_812x812xrecortarxagrandar.jpg?random=1616970886"
+        },
+        {
+            "marca":"taza para cafe",
+            "material": "ceramica",
+            "precio": "1000",
+            "id": "6",
+            "thumbnailUrl": "https://www.hola.com/imagenes/seleccion/20200918175443/tazas-bonitas-practicas-oficina/0-866-303/tazas-blanco-negro-oficina-a.jpg"
+        }
+    ]
+}
+
+
+
