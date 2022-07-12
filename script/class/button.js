@@ -1,3 +1,6 @@
+
+// objeto 
+
 class buttonCardList {
     constructor(name, id) {
         this.name = name

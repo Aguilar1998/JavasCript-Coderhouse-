@@ -1,7 +1,12 @@
-
-
 // Declaraciones
-const allproductos = [termo, bombilla, mochilaMatera, mate, yerba, taza]
+const allproductos = [
+    termo,
+    bombilla, 
+    mochilaMatera, 
+    mate, 
+    yerba, 
+    taza
+]
 
 const allButton = [
     termoButton, 
@@ -15,39 +20,20 @@ const allButton = [
 
 
 
+
 // Query de Elementos
 
 const productosListContainer = document.querySelector('.main__Galeri')
 
 const ListContainer = document.querySelector('.seleccionButton')
 
-const eventButton = document.querySelector('.card__Button')
 
 
 // Funciones
-const mostrarmensaje = () =>{
-    console.log('Evento escuchado');
-}
-
-// CALCULAR Y RENDERIZAR EL SUBTOTAL
-const renderSubtotal = () => {
-    let totalPrice = 0,
-        totalItems = 0;
-    
-    cart.forEach((item) => {
-      totalPrice += item.price * item.numberOfUnits;
-        totalItems += item.numberOfUnits;
-    });
-    
-    subtotalEl.innerHTML = `Subtotal (${totalItems} items): $${totalPrice.toFixed(
-        2
-    )}`;
-    totalItemsInCartEl.innerHTML = totalItems;
-};
 
 
 const mostrarTodosLosProductos = (e) =>{
-    console.log(e.target);
+    // console.log(e.target);
     allproductos.forEach(producto => {
         const productoCard = document.createElement('section')
         productoCard.className = 'main__Galeri'
@@ -77,14 +63,14 @@ const mostrarTodosLosProductos = (e) =>{
         `;
         productosListContainer.append(productoCard)
     });
-
+    // array 
     let carritoCompra = []
 
     const mostrarDatosDelBoton = (e) =>{
         const datoDeLosProductos = e.target.getAttribute('data-id');
         const product = allproductos.find(miProducto => miProducto.marca == datoDeLosProductos)
         carritoCompra.push(product)
-        // console.log(carritoCompra);   
+        console.log(carritoCompra);   
         console.log('carrito', carritoCompra)
         mostrarTotal(getTotal(carritoCompra))
         mostrarCarrito(carritoCompra) 
@@ -95,7 +81,6 @@ const mostrarTodosLosProductos = (e) =>{
         agregarAlCarrito.addEventListener('click', mostrarDatosDelBoton)
     });
 
-    //get total carrito
     const getTotal = (arr) => {
         let total = 0
         arr.forEach((producto) => {
@@ -103,34 +88,15 @@ const mostrarTodosLosProductos = (e) =>{
         })
         return total
     }
-    //pintar total carrito
     const mostrarTotal = (total) => {
         const divTotal = document.querySelector('#total-carrito')
         divTotal.innerHTML = total.toLocaleString()
     }
-    //pintar cuenta carrito
     const mostrarCarrito = (arr) => {
         const divCuenta = document.querySelector('.cuenta-carrito')
         divCuenta.innerHTML = arr.length
     }
-    
 }
-
-
-
-
-// variable para mostrar todos los productos
-const agregarProductosConBoton = document.querySelector('.todosLosProductos')
-console.log(agregarProductosConBoton);
-
-// evento click para mostrar todos los productos 
-agregarProductosConBoton.addEventListener('click',mostrarTodosLosProductos )
-
-
-
-
-
-// funcion para renderizar botones
 
 const listButton = () =>{
     allButton.forEach(buttonCardList => {
@@ -148,6 +114,51 @@ const listButton = () =>{
 
 
 
+
+const mostrarProductoSeleccionado = document.querySelector('.seleccionButton')
+console.log(mostrarProductoSeleccionado);
+mostrarProductoSeleccionado.addEventListener('click',mostrarTodosLosProductos)
+
+
+const agregarCartProducto = () => {
+    const miClick = documen.querySelector('.main__Galeri')
+    console.log(miClick);
+    miClick.addEventListener('click', listButton)
+
+    switch (productos(this.id)) {
+        case 1:
+            productos(termo)
+            console.log(termo);    
+            break
+        case 2:
+            productos(bombilla)
+            console.log(bombilla);
+            break
+        case 3:
+            productos(mochilaMatera)
+            console.log(mochilaMatera) 
+            break
+        case 4:
+            productos(mate)
+            console.log(mate) 
+            break
+        case 5:
+            productos(yerba)
+            console.log(yerba) 
+            break
+        case 6:
+            productos(taza)
+            console.log(taza) 
+            break
+        default:
+            console.log('Boton incorrecto')
+            break
+    }
+}
+
+
+
+
 // EventListeners
 
 
@@ -155,14 +166,3 @@ const listButton = () =>{
 // Ejecucioones
 
 listButton()
-// mostrarTodosLosProductos()
-
-
-// Traemos los productos desde json
-
-fetch('../data/productos.json')
-    .then((res) => res.json())
-    .then((jsonResponse)=>{
-        allproductos = jsonResponse.data
-        mostrarTodosLosProductos()
-    })

@@ -1,3 +1,6 @@
+
+// Objeto
+
 class productos {
     constructor(marca, material, precio, id, thumbnailUrl ) {
         this.marca = marca
