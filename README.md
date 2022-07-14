@@ -4,7 +4,7 @@
 ...
 
 
-## Documentacion #1: figura geométricas
+## Documentacion #1: programa del curso
 
 1. Conceptos generales: sintaxis y variables
 
