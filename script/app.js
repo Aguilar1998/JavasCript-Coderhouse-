@@ -17,20 +17,35 @@ const allButton = [
     tazaButton
 ]
 
+const carritoCompra = []
+
+const carritoButton = []
 
 
+///////////////////////////////////
 
-
-// Query de Elementos
+// Query de elementos
 
 const productosListContainer = document.querySelector('.main__Galeri')
 
 const ListContainer = document.querySelector('.seleccionButton')
 
+const mostrarProductoSeleccionado = document.querySelector('.seleccionarProducto')
 
+const pintarProductosSeleccionado = document.querySelector('.cart-Items')
+
+
+
+
+
+
+
+
+///////////////////////////////////
 
 // Funciones
 
+console.group("Funcion card")
 
 const mostrarTodosLosProductos = (e) =>{
     // console.log(e.target);
@@ -63,23 +78,52 @@ const mostrarTodosLosProductos = (e) =>{
         `;
         productosListContainer.append(productoCard)
     });
-    // array 
-    let carritoCompra = []
 
+    const comprarCarrito = () =>{
+        pintarProductosSeleccionado.innerHTML = ''
+        carritoCompra.forEach(carro => {
+            const card = document.createElement('div')
+            card.className = 'cart-Items'
+            card.setAttribute('data-id', carro.marca)
+            card.innerHTML = `
+                <div class="cart__header">
+                    <img src="${carro.thumbnailUrl}" alt="producto">
+                    <h3 class="cart__Nombre">
+                        ${carro.marca}
+                    </h3>
+                    <div class="btn minus" onclick="changeNumberOfUnits('minus', ${carro.id})">-</div>
+                    <span class="cart__Precio">
+                        $${carro.precio}
+                    </span>
+                    <div class="btn plus" onclick="changeNumberOfUnits('plus', ${carro.id})">+</div>
+                </div>
+            `;
+            pintarProductosSeleccionado.append(card)
+        });
+
+    }
+    
     const mostrarDatosDelBoton = (e) =>{
         const datoDeLosProductos = e.target.getAttribute('data-id');
         const product = allproductos.find(miProducto => miProducto.marca == datoDeLosProductos)
         carritoCompra.push(product)
         console.log(carritoCompra);   
-        console.log('carrito', carritoCompra)
+        console.log('carritoCompra', carritoCompra)
         mostrarTotal(getTotal(carritoCompra))
         mostrarCarrito(carritoCompra) 
+        comprarCarrito()
+        localStorage.setItem('carritoCompra', JSON.stringify(carritoCompra))
     }
 
     const botonesReferencias =document.querySelectorAll('.card__Button')
     botonesReferencias.forEach(agregarAlCarrito => {
         agregarAlCarrito.addEventListener('click', mostrarDatosDelBoton)
     });
+
+    if (localStorage.getItem('carritoCompra')) {
+        carritoCompra = JSON.parse(localStorage.getItem('carritoCompra'))
+        mostrarDatosDelBoton()
+    }
 
     const getTotal = (arr) => {
         let total = 0
@@ -96,7 +140,27 @@ const mostrarTodosLosProductos = (e) =>{
         const divCuenta = document.querySelector('.cuenta-carrito')
         divCuenta.innerHTML = arr.length
     }
+
+
+    const vaciarCarrito =() => {
+        if (localStorage.getItem('carritoCompra')) {
+            localStorage.removeItem('carritoCompra')
+        }
+        carritoCompra = []
+        carritoCompra()
+    }
+    const vaciarCarritoBtn = document.querySelector('.vaciarCarrito')
+    vaciarCarritoBtn.addEventListener('click', vaciarCarrito)
 }
+
+
+console.groupEnd()
+
+
+
+///////////////////////////////////
+
+console.group("funcion Boton")
 
 const listButton = () =>{
     allButton.forEach(buttonCardList => {
@@ -112,56 +176,23 @@ const listButton = () =>{
     });
 }
 
+console.groupEnd()
 
 
 
-const mostrarProductoSeleccionado = document.querySelector('.seleccionButton')
-console.log(mostrarProductoSeleccionado);
-mostrarProductoSeleccionado.addEventListener('click',mostrarTodosLosProductos)
-
-
-const agregarCartProducto = () => {
-    const miClick = documen.querySelector('.main__Galeri')
-    console.log(miClick);
-    miClick.addEventListener('click', listButton)
-
-    switch (productos(this.id)) {
-        case 1:
-            productos(termo)
-            console.log(termo);    
-            break
-        case 2:
-            productos(bombilla)
-            console.log(bombilla);
-            break
-        case 3:
-            productos(mochilaMatera)
-            console.log(mochilaMatera) 
-            break
-        case 4:
-            productos(mate)
-            console.log(mate) 
-            break
-        case 5:
-            productos(yerba)
-            console.log(yerba) 
-            break
-        case 6:
-            productos(taza)
-            console.log(taza) 
-            break
-        default:
-            console.log('Boton incorrecto')
-            break
-    }
-}
 
 
 
+
+///////////////////////////////////
 
 // EventListeners
 
+mostrarProductoSeleccionado.addEventListener('click',mostrarTodosLosProductos)
 
+
+
+///////////////////////////////////
 
 // Ejecucioones
 

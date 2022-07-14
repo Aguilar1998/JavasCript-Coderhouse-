@@ -72,17 +72,6 @@ ul{
     color: #fff;
 }
 
-/* .todosLfosProductos{
-    border-radius: 20px;
-    border: 1px solid #4f6847;
-    background-color: #fff;
-    padding: 0 1rem;
-}
-
-.todosLosProductos:hover{
-    background-color: #628158;
-    color: #fff;
-} */
 
 
 
@@ -137,11 +126,11 @@ ul{
 .container .container__Nav{
     display: flex;
     justify-content: space-between;
-    width: 15rem;
+    width: max-content;
 }
 .container .container__Nav a{
     margin: auto;
-    width: 100%;
+    width: max-content;
 }
 .container .container__Nav .loginUp{
     border-radius: 1rem;
@@ -344,8 +333,6 @@ ul{
 
 
 
-
-
 /* ///////////////////////////////////////////////// */
 
 /* Buttom */
@@ -362,8 +349,7 @@ ul{
     background-color: #628158;
     cursor: pointer;
     color: #fff;
-}
-
+} 
 
 .seleccionarProducto{
     width: 300px;
@@ -397,8 +383,66 @@ ul{
 
 /* ///////////////////////////////////////////////// */
 
-/* Full card  */
+/*cart  */
 
+.cart{
+    height: 80vh;
+    width: ma;
+    border: 1px solid #4f6847;
+    overflow-y: auto;
+}
+
+.cart .cart__header{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+    border-bottom: 1px solid #0b0c0d;
+    align-items: center;
+    gap: 15px;
+    margin: 0% 5px;
+}
+.cart .vaciarCarrito{
+    padding: 5px;
+    background-color: #fff;
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid #0b0c0d;
+    width: max-content; 
+    align-items: center;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.cart .vaciarCarrito:hover{
+    background-color: red;
+    color: #fff;
+    font-size: 16px;
+    margin: 14.5px auto;
+    
+}
+.cart .cart-Items{
+    margin: 1rem;
+}
+.cart__Precio{
+    width: max-content;
+    color: rgba(48, 221, 48, 0.704);
+}
+.cart__header img{
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    opacity: 0.4;
+    filter: grayscale(100%);
+    max-width: 20%;
+}
+.cart__Nombre{
+    width: max-content;
+    font-size: 16px;
+}
+
+
+/* -------------------------- */
+/* card */
 .card{
     max-width: 20em;
     margin: 1em;
@@ -448,9 +492,6 @@ ul{
 
 
 
-
-
-
 /* ///////////////////////////////////////////////// */
 
 /* Section of media query */
@@ -491,18 +532,3 @@ ul{
     }
 }
 
-
-
-
-
-.cart{
-    width: 30vw;
-    height: 80vh;
-    border: 1px solid #4f6847;
-}
-.cart .cart__header{
-    display: flex;
-    justify-content: space-around;
-    margin: 1rem 0;
-    border-bottom: 1px solid #0b0c0d;
-}
