@@ -79,6 +79,7 @@ const mostrarTodosLosProductos = (e) =>{
         productosListContainer.append(productoCard)
     });
 
+    // Imprimir el carrito imagen/nombre/precio 
     const comprarCarrito = () =>{
         pintarProductosSeleccionado.innerHTML = ''
         carritoCompra.forEach(carro => {
@@ -100,9 +101,25 @@ const mostrarTodosLosProductos = (e) =>{
             `;
             pintarProductosSeleccionado.append(card)
         });
-
     }
-    
+
+    const mostrarTotal = (total) => {
+        const divTotal = document.querySelector('#total-carrito')
+        divTotal.innerHTML = total.toLocaleString()
+    }
+    const getTotal = (arr) => {
+        let total = 0
+        arr.forEach((producto) => {
+            total += producto.precio
+        })
+        return total
+    }
+    const mostrarCarrito = (arr) => {
+        const divCuenta = document.querySelector('.cuenta-carrito')
+        divCuenta.innerHTML = arr.length
+    }
+
+    // funcion para imprimir los datos de la card seleccionanda en el header y en el lugar donde esta pintado el carrito
     const mostrarDatosDelBoton = (e) =>{
         const datoDeLosProductos = e.target.getAttribute('data-id');
         const product = allproductos.find(miProducto => miProducto.marca == datoDeLosProductos)
@@ -112,9 +129,11 @@ const mostrarTodosLosProductos = (e) =>{
         mostrarTotal(getTotal(carritoCompra))
         mostrarCarrito(carritoCompra) 
         comprarCarrito()
+        // pasa de texto a objeto el stringify y el set iten borra y copia el nuevo array
         localStorage.setItem('carritoCompra', JSON.stringify(carritoCompra))
     }
-
+    
+    // Evento para tomar el click de los productos y mostrar el producto seleccionado llamando la funcion para imprimir los datos 
     const botonesReferencias =document.querySelectorAll('.card__Button')
     botonesReferencias.forEach(agregarAlCarrito => {
         agregarAlCarrito.addEventListener('click', mostrarDatosDelBoton)
@@ -122,35 +141,20 @@ const mostrarTodosLosProductos = (e) =>{
 
     if (localStorage.getItem('carritoCompra')) {
         carritoCompra = JSON.parse(localStorage.getItem('carritoCompra'))
-        mostrarDatosDelBoton()
+        comprarCarrito()
     }
 
-    const getTotal = (arr) => {
-        let total = 0
-        arr.forEach((producto) => {
-            total += producto.precio
-        })
-        return total
-    }
-    const mostrarTotal = (total) => {
-        const divTotal = document.querySelector('#total-carrito')
-        divTotal.innerHTML = total.toLocaleString()
-    }
-    const mostrarCarrito = (arr) => {
-        const divCuenta = document.querySelector('.cuenta-carrito')
-        divCuenta.innerHTML = arr.length
-    }
-
-
-    const vaciarCarrito =() => {
+    const vaciar = () => {
         if (localStorage.getItem('carritoCompra')) {
             localStorage.removeItem('carritoCompra')
         }
         carritoCompra = []
-        carritoCompra()
+        comprarCarrito()
     }
-    const vaciarCarritoBtn = document.querySelector('.vaciarCarrito')
-    vaciarCarritoBtn.addEventListener('click', vaciarCarrito)
+
+    // vaciarCarrito()
+    const move = document.querySelector('.vaciarCarrito')
+    move.addEventListener('click', vaciar)
 }
 
 
