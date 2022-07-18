@@ -1,3 +1,8 @@
+
+
+
+///////////////////////////////////
+
 // Declaraciones
 const allproductos = [
     termo,
@@ -7,8 +12,8 @@ const allproductos = [
     yerba, 
     taza
 ]
-
 const allButton = [
+    todos,
     termoButton, 
     bombillaButton,
     mochilaMateraButton, 
@@ -16,37 +21,30 @@ const allButton = [
     yerbaButton, 
     tazaButton
 ]
-
 const carritoCompra = []
-
 const carritoButton = []
+
+
+
+
 
 
 ///////////////////////////////////
 
 // Query de elementos
-
 const productosListContainer = document.querySelector('.main__Galeri')
-
 const ListContainer = document.querySelector('.seleccionButton')
-
 const mostrarProductoSeleccionado = document.querySelector('.seleccionarProducto')
-
 const pintarProductosSeleccionado = document.querySelector('.cart-Items')
 
 
 
 
 
-
-
-
 ///////////////////////////////////
 
-// Funciones
-
+// Funcione para renderizar produtos
 console.group("Funcion card")
-
 const mostrarTodosLosProductos = (e) =>{
     // console.log(e.target);
     allproductos.forEach(producto => {
@@ -156,33 +154,42 @@ const mostrarTodosLosProductos = (e) =>{
     const move = document.querySelector('.vaciarCarrito')
     move.addEventListener('click', vaciar)
 }
-
-
 console.groupEnd()
+
+
 
 
 
 ///////////////////////////////////
 
+// Funcion para renderizar botones
 console.group("funcion Boton")
-
 const listButton = () =>{
     allButton.forEach(buttonCardList => {
         const listaDeproductosEnBotones = document.createElement('button')
         listaDeproductosEnBotones.className = 'seleccionarProducto'
         listaDeproductosEnBotones.setAttribute('data-id', buttonCardList.id)
         listaDeproductosEnBotones.innerHTML = `
-        <span>
-            ${buttonCardList.name}
-        </span>
+            <span>
+                ${buttonCardList.name}\
+            </span>
         `;
         ListContainer.append(listaDeproductosEnBotones)
     });
+    agregarListenerbotones()
 }
-
+const renderizarBotonesCard = (e) =>{
+    const idDelProducto = e.target.closest('.seleccionarProducto').getAttribute('data-id')
+    const miSeleccionDelProducto =allproductos.find((productos) => productos.id == idDelProducto)
+    console.log(miSeleccionDelProducto);
+}
+const agregarListenerbotones = () =>{
+    const productoButon = document.querySelectorAll('.seleccionarProducto')
+    productoButon.forEach(button => {
+        button.addEventListener('click',renderizarBotonesCard)
+    })
+}
 console.groupEnd()
-
-
 
 
 
@@ -191,13 +198,14 @@ console.groupEnd()
 ///////////////////////////////////
 
 // EventListeners
-
 mostrarProductoSeleccionado.addEventListener('click',mostrarTodosLosProductos)
+
+
 
 
 
 ///////////////////////////////////
 
 // Ejecucioones
-
 listButton()
+// crear una condicion para plasmar todos los productos y que no se repitan

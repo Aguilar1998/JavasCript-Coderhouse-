@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ElMejorMAte | Contactos | TodoSobreElMate</title>
-    <!-- link de font awesome -->
-    <script src="https://kit.fontawesome.com/19c7f2fb8c.js" crossorigin="anonymous"></script>
+    <title>Porcentajes y descuentos | ElMejorMAte | TodoSobreElMate</title>
     <!-- linl del css -->
     <link rel="stylesheet" href="../css/style.css">
 
@@ -16,9 +14,11 @@
     <header class="container">
         <ul class="container__List">
             <li><a href="productos.html">Productos</a></li>
-            <li><a class="static" href="contactos.html">Contactos</a></li>
+            <li><a class="static" href="descuento.html">Descuento</a></li>
         </ul>
+
         <a href="../../index.html"><img src="../image/Logotipo.jpg" alt="Logotipo"></a>
+
         <nav class="container__Nav">
             <a href="login-up.html">Login up</a>
             <button class="cart" >
@@ -31,7 +31,24 @@
     </header>
     <!-- the end of the header -->
 
-    <main class="main__Contactos">
+    <main class="main__Descuentos">
+        <div class="formContainer">
+            <h3> Calcula tu descuento! </h3>
+            <form id="formulario">
+
+                <label for="inputPrice">Ingresa el precio del producto</label>
+                <input type="number" id="inputPrice" />
+
+                <label for="inputDiscount">Ingresa el descuento que figura en tu producto.</label>
+                <input  type="number" id="inputDiscount" />
+
+                <button class="buttonDescount" type="button" onclick="calculos()" >
+                    Calcular el precio con descuento
+                </button>
+
+                <p id="printDescount"></p>
+            </form>
+        </div>
     </main>
 
     <!-- start of footer -->
@@ -39,7 +56,7 @@
         <a href="../../index.html"><img src="../image/Logotipo.jpg" alt="Logotipo"></a>
         <ul class="footer__Nav">
             <li><a href="assets/page/productos.html">Productos</a></li>
-            <li><a class="static" href="assets/page/contactos.html">Contactos</a></li>
+            <li><a class="static" href="assets/page/descuento.html">Descuento</a></li>
         </ul>
         <div class="footer__Redes">
             <p>&copysr;2022 Project JavaScript. Martin Aguilar</p>
@@ -52,8 +69,8 @@
         </div>
     </footer>
 
-    <!-- link js -->
-    <script src="../../script/events.js"></script>
-    <script src="../../script/javascript.js"></script>
-</body>
+    <!-- link de font awesome -->
+    <script src="https://kit.fontawesome.com/19c7f2fb8c.js" crossorigin="anonymous"></script>
+    <!-- Script js -->
+    <script src="../../script/descuento.js"></script></body>
 </html>

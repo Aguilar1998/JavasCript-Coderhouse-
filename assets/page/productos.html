@@ -5,20 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ElMejorMAte | Productos | TodoSobreElMate</title>
+    <!-- link de bootstrap  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"/>
-
     <!-- linl del css -->
-
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-
     <section class="container__Vw">
         <!-- start of header -->
         <header class="container">
             <ul class="container__List">
                 <li><a class="static" href="productos.html">Productos</a></li>
-                <li><a href="contactos.html">Contactos</a></li>
+                <li><a href="descuento.html">Descuento</a></li>
             </ul>
             <a href="../../index.html"><img src="../image/Logotipo.jpg" alt="Logotipo"></a>
             <nav class="container__Nav">
@@ -35,7 +33,6 @@
     
     
 
-
         <!-- start of main -->
         <main class="galeri">
             <section class="seleccionButton">
@@ -46,20 +43,21 @@
             <section id="galeria"  class="main__Galeri">
                 <!-- Contenido realizado con js -->
             </section>
-            <div class="cart">
-                <button class="vaciarCarrito">Vaciar Carrito</button>
+            <section class="sectionCart">
+                <button type="button" class="vaciarCarrito">Vaciar Carrito</button>
                 <div class="cart__header">
                     <div class="column1">Item</div>
                     <div class="column2">Product</div>
                     <div class="column3">Units</div>
                 </div>
-                <div class="cart-Items">
-                    <!-- Conteniodo desde javaScript -->
+                <div class="cart">
+                    <div class="cart-Items">
+                        <!-- Conteniodo desde javaScript -->
+                    </div>
                 </div>
-            </div>
+            </section>
         </main>
         <!-- the end of the main -->
-
 
 
 
@@ -68,7 +66,7 @@
             <a href="../../index.html"><img src="../image/Logotipo.jpg" alt="Logotipo"></a>
             <ul class="footer__Nav">
                 <li><a class="static" href="assets/page/productos.html">Productos</a></li>
-                <li><a href="assets/page/contactos.html">Contactos</a></li>
+                <li><a href="assets/page/descuento.html">Descuento</a></li>
             </ul>
             <div class="footer__Redes">
                 <p>&copysr;2022 Project JavaScript. Martin Aguilar</p>
@@ -84,24 +82,12 @@
 
 
 
-
-
-
-
         <!-- link de font awesome -->
-        
         <script src="https://kit.fontawesome.com/19c7f2fb8c.js" crossorigin="anonymous"></script>
-        
         <!-- script js -->
-        
         <script src="../../script/class/productos.js"></script>
         <script src="../../script/class/button.js"></script>
-        <script src="../../script/storage-json.js"></script>
-        <script src="../../script/app.js"></script>
-        
-        <!-- <script src="/script/mate.js"></script> -->
-        
+        <script src="../../script/app.js"></script>        
     </section>
-    
 </body>
 </html>

@@ -116,9 +116,8 @@ ul{
 }
 .container .container__List{
     display: flex;
-}
-.container .container__List li{
-    margin-left: 1rem;
+    margin: auto 0;
+    width: max-content;
 }
 .static{
     color: #4f6847;
@@ -147,7 +146,7 @@ ul{
 
 /* Form */
 
-.main__Contactos{
+.main__Descuentos{
     text-align: center;
 }
 
@@ -248,9 +247,25 @@ ul{
 
 
 
-
-
-
+.buttonDescount{
+    max-width: 350px;
+    margin: 0 auto ;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #4f6847;
+    border-radius: 10px;
+}
+.buttonDescount:hover{
+    background-color: #628158;
+    color: #fff;
+}
+.main__Descuentos .formContainer{
+    justify-content: space-around;
+}
+.main__Descuentos .formContainer #formulario{
+    justify-content: space-around;
+    height: 40vh;
+}
 
 
 
@@ -263,7 +278,7 @@ ul{
 .footer{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     text-align: center;
     border-top: 1px solid #fff;
     position: relative;
@@ -279,8 +294,10 @@ ul{
 .footer .footer__Nav li{
     margin: 0 1rem;
 }
-.footer img{
-    width: 60px;
+.footer a{
+    margin: auto;
+}
+.footer a img{
     height: 60px;
     margin: 1rem auto 0;
     border-radius: 100%;
@@ -310,7 +327,7 @@ ul{
 
 /* ///////////////////////////////////////////////// */
 
-/* section galeri */
+/* section productos */
 .galeri{
     display: flex;
     justify-content: flex-start;
@@ -377,23 +394,20 @@ ul{
 /* ///////////////////////////////////////////////// */
 
 /*cart  */
-
-.cart{
-    height: 80vh;
-    width: ma;
-    border: 1px solid #4f6847;
-    overflow-y: auto;
+.sectionCart{
+    border: 1px solid #4f6847; 
+    height: max-content; 
 }
-.cart .cart__header{
+
+.sectionCart .cart__header{
     display: flex;
     justify-content: space-around;
     padding: 1rem 0;
-    border-bottom: 1px solid #0b0c0d;
     align-items: center;
     gap: 15px;
     margin: 0% 5px;
 }
-.cart .vaciarCarrito{
+.sectionCart .vaciarCarrito{
     padding: 5px;
     background-color: #fff;
     display: flex;
@@ -404,12 +418,18 @@ ul{
     margin: 1rem auto;
     text-align: center;
 }
-.cart .vaciarCarrito:hover{
+.sectionCart .vaciarCarrito:hover{
     background-color: red;
     color: #fff;
     font-size: 16px;
     margin: 14.5px auto;
     
+}
+.cart{
+    height: 70vh;
+    width: ma;
+    border-top: 3px solid #4f6847;
+    overflow-y: auto;
 }
 .cart .cart-Items{
     margin: 1rem;
@@ -522,4 +542,3 @@ ul{
         margin: 1rem auto;
     }
 }
-
