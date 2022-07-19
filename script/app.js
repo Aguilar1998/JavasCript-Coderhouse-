@@ -208,4 +208,3 @@ mostrarProductoSeleccionado.addEventListener('click',mostrarTodosLosProductos)
 
 // Ejecucioones
 listButton()
-// crear una condicion para plasmar todos los productos y que no se repitan

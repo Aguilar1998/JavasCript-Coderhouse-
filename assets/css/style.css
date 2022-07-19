@@ -427,7 +427,7 @@ ul{
 }
 .cart{
     height: 70vh;
-    width: ma;
+    width: min-content;
     border-top: 3px solid #4f6847;
     overflow-y: auto;
 }

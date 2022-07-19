@@ -7,9 +7,7 @@
 ## Documentacion #1: programa del curso
 
 1. Conceptos generales: sintaxis y variables
-
 2. Control de flujos
-
 3. Ciclos/iteraciones
 4. Programación con funciones
 5. Objetos
