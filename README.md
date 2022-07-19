@@ -35,6 +35,18 @@
 4_ Cuarto paso: integrar JS cn html
 
 En esta seccion el usuario debera colocar un descuento asociado al producto el cual desea obtener el descuento
--Yerba 10% de descuento
--Termo 15% de descuento
--Mate 1
+Ejemplos para probar:
+-Yerba 10% de descuento.
+-Termo 15% de descuento.
+-Mate 20% de descuento.
+
+## Documentacion #3:  Productos
+
+1_ Primer paso: definir funcionalidades
+2_ Segundo paso: Implementar dom, array, estorage, eventos en JavaScript
+3_ Tercer paso: Crear funciones
+4_ Cuarto paso: integrar JS cn html
+
+
+
+Los botones deben mostrar su respectiva descripcion y al sumar un producto al carrito debe visualizarse en su sector, mostrar el total y la cantidad de productos.
