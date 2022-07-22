@@ -132,7 +132,7 @@ const mostrarTodosLosProductos = (e) =>{
     }
     
     // Evento para tomar el click de los productos y mostrar el producto seleccionado llamando la funcion para imprimir los datos 
-    const botonesReferencias =document.querySelectorAll('.card__Button')
+    const botonesReferencias = document.querySelectorAll('.card__Button')
     botonesReferencias.forEach(agregarAlCarrito => {
         agregarAlCarrito.addEventListener('click', mostrarDatosDelBoton)
     });
@@ -146,8 +146,9 @@ const mostrarTodosLosProductos = (e) =>{
         if (localStorage.getItem('carritoCompra')) {
             localStorage.removeItem('carritoCompra')
         }
-        carritoCompra = []
+        // carritoCompra = []
         comprarCarrito()
+        console.log(carritoCompra);
     }
 
     // vaciarCarrito()
@@ -177,10 +178,11 @@ const listButton = () =>{
         ListContainer.append(listaDeproductosEnBotones)
     });
     agregarListenerbotones()
+    renderizarBotonesCard()
 }
 const renderizarBotonesCard = (e) =>{
     const idDelProducto = e.target.closest('.seleccionarProducto').getAttribute('data-id')
-    const miSeleccionDelProducto =allproductos.find((productos) => productos.id == idDelProducto)
+    const miSeleccionDelProducto = allproductos.find((productos) => productos.id == idDelProducto)
     console.log(miSeleccionDelProducto);
 }
 const agregarListenerbotones = () =>{
@@ -189,7 +191,7 @@ const agregarListenerbotones = () =>{
         button.addEventListener('click',renderizarBotonesCard)
     })
 }
-console.groupEnd()
+console.groupEnd() 
 
 
 
